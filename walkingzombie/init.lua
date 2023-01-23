@@ -14,13 +14,10 @@ local zombienods = {
 "default:desert_stone",
 "default:stone", 
 "default:desert_stone",
---"default:cobble",
-"default:mossycobble", 
-"default:chest",
+--"default:cobble", 
 "default:ice",
-
+"default:gravel",
 } 
-
 
 ---- SKULL SWORD  ------------------------------------------------------------------------------------------------------
 
@@ -29,25 +26,30 @@ mobs:register_mob("walkingzombie:walkingzombie", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
+	attack_animals = true,
+	group_attack = true,
 	pathfinding = true,
 	reach = 3,
-	damage = 6,
-	hp_min = 10,
-	hp_max = 10,
+	damage = 3,
+	hp_min = 20,
+	hp_max = 20,
 	armor = 100,
 	collisionbox = {-0.4, 0, -0.4, 0.4, 1.8, 0.4},
 	visual = "mesh",
 	mesh = "walkingzombie.b3d",
 	--rotate = 180,
 	textures = {
+		{"walkingzombie2.png"},
 		{"walkingzombie.png"},
+		
 	},
 	--glow = 4,
 	--blood_texture = " ",
 	makes_footstep_sound = true,
 	sounds = {
-		--attack = "",
-		--death = " ",
+	        random ="zombie_angry",
+		--attack = "zombie_hit",
+		death = "zombie_death ",
 	},
 	walk_velocity = 1,
 	run_velocity = 5,
@@ -56,7 +58,9 @@ mobs:register_mob("walkingzombie:walkingzombie", {
 	floats = 0,
 	view_range = 35,
 	drops = {
-		--{name = "huntersaxe:hunter_axe", chance = 2, min = 1, max = 1},
+		{name = "default:coal_lump", chance = 2, min = 1, max = 1},
+		{name = "farming:bread 3", chance = 2, min = 1, max = 1},
+		{name = "foods:canned_tomato", chance = 4, min = 1, max = 1},
 		
 	},
 	water_damage = 0,
@@ -84,12 +88,12 @@ mobs:spawn({
 	name = "walkingzombie:walkingzombie",
 	nodes = hunternods,
 	min_light = 0,
-	max_light = 14,
+	max_light = 7, -- 14
 	chance = 7000,
-	min_height = 0,
+	min_height = -20000,
 	max_height = 200,
 	--max_height = 200,
-	active_object_count = 3,
+	active_object_count = 6,
 })
 
 

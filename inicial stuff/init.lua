@@ -1,0 +1,11 @@
+minetest.register_on_newplayer(function(player)
+	print("[minimal] giving initial stuff to player")
+	player:get_inventory():add_item('main','toolx:baseball_bat')
+	player:get_inventory():add_item('main','foods:canned_tomato 8')
+	player:get_inventory():add_item('main','items:walkietalkie')
+	--player:get_inventory():add_item('main','')
+	--player:get_inventory():add_item('main','')
+	--player:get_inventory():add_item('main','')
+	--player:get_inventory():add_item('main','')
+	
+end)
