@@ -4,8 +4,8 @@ minetest.register_node("deco:stopsign", {
 	mesh = "stopsign.obj",
 	isual_size = {x=1, y=1},
 	--inventory_image = "",
-	wield_image = "stopsign.png",
-	tiles = {"stopsign.png"},
+	--wield_image = "stop_sign.png",
+	tiles = {"stop_sign.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	--on_place = minetest.rotate_node,
@@ -14,6 +14,7 @@ minetest.register_node("deco:stopsign", {
 	floodable = false,
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
 	drop = "deco:stopsign",
+	sounds = default.node_sound_metal_defaults(),
 	
 	selection_box = {
 		type = "fixed",
@@ -47,6 +48,7 @@ minetest.register_node("deco:trashcan", {
 	floodable = false,
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
 	drop = "deco:trashcan",
+	sounds = default.node_sound_metal_defaults(),
 	
 	selection_box = {
 		type = "fixed",
@@ -81,6 +83,7 @@ minetest.register_node("deco:vendingmachine", {
 	floodable = false,
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
 	drop = "deco:vendingmachine",
+	sounds = default.node_sound_metal_defaults(),
 	
 	selection_box = {
 		type = "fixed",
@@ -112,6 +115,7 @@ minetest.register_node("deco:radio", {
 	floodable = false,
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
 	drop = "deco:radio",
+	sounds = default.node_sound_metal_defaults(),
 	
 	selection_box = {
 		type = "fixed",
@@ -176,6 +180,7 @@ minetest.register_node("deco:computer", {
 	floodable = false,
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
 	drop = "deco:computer",
+	sounds = default.node_sound_metal_defaults(),
 	
 	selection_box = {
 		type = "fixed",
@@ -207,6 +212,7 @@ minetest.register_node("deco:armchair", {
 	floodable = false,
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
 	drop = "deco:armchair",
+	
 	
 	selection_box = {
 		type = "fixed",
@@ -241,6 +247,7 @@ minetest.register_node("deco:shelving", {
 	floodable = false,
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
 	drop = "deco:shelving",
+	sounds = default.node_sound_metal_defaults(),
 	
 	selection_box = {
 		type = "fixed",
@@ -258,9 +265,200 @@ minetest.register_node("deco:shelving", {
 
 
 
+---- MEDICINE BOX :   ( Não tem craft
+minetest.register_node("deco:medicinebox", {
+	description = "Medicine Box",
+	drawtype = "mesh",
+	mesh = "medicine_box.obj",
+	isual_size = {x=1, y=1},
+	--inventory_image = "",
+	tiles = {"medicine_box.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	--on_place = minetest.rotate_node,
+	sunlight_propagates = true,
+	walkable = true, 
+	floodable = false,
+	groups = {oddly_breakable_by_hand = 3},
+	
+	
+	drop = {
+		--max_items = 5,
+		items = {
+			{
+				items = {'items:bandaid 1'},
+				rarity = 1,
+			},
+			{
+				items = {'items:medicalkit 1'},
+				rarity = 7,
+			},
+			
+			
+
+		}
+	},
+	
+	sounds = default.node_sound_metal_defaults(),
+	
+	selection_box = {
+		type = "fixed",
+		--    esqueda,fundo,fron,direita,top,tras
+		fixed = {-0.2, -0.5, -0.3, 0.2, -0.4, 0.2},
+	},
+	
+	node_box = {
+		type = "fixed", 
+		fixed = {-0.2, -0.5, -0.3, 0.2, -0.4, 0.2},
+	},
+	
+	
+})
+
+
+---- TRAFFIC CONE:
+minetest.register_node("deco:trafficcone", {
+	description = "Traffic Cone",
+	drawtype = "mesh",
+	mesh = "traffic_cone.obj",
+	isual_size = {x=1, y=1},
+	--inventory_image = "",
+	tiles = {"traffic_cone.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	--on_place = minetest.rotate_node,
+	sunlight_propagates = true,
+	walkable = true, 
+	floodable = false,
+	groups = {cracky = 3, oddly_breakable_by_hand = 3},
+	drop = "deco:trafficcone",
+	
+	
+	selection_box = {
+		type = "fixed",
+		--    esqueda,altura,tras..,direita ,negativo aumenta para baixo, positivo aumenta para cima
+		fixed = {-0.2, -0.5, -0.2, 0.2, 0.3, 0.2},
+	},
+	
+	node_box = {
+		type = "fixed", 
+		fixed = {-0.2, -0.5, -0.2, 0.2, 0.3, 0.2},
+	},
+	
+	
+})
+
+
+---- TRAFFIC POLE:
+minetest.register_node("deco:trafficpole", {
+	description = "Traffic Pole",
+	drawtype = "mesh",
+	mesh = "traffic_pole.obj",
+	--visual_size = {x=1, y=1},
+	--inventory_image = "",
+	tiles = {"traffic_pole.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	--on_place = minetest.rotate_node,
+	sunlight_propagates = true,
+	walkable = true, 
+	floodable = false,
+	groups = {cracky = 3, oddly_breakable_by_hand = 3},
+	drop = "deco:trafficpole",
+	
+	
+	selection_box = {
+		type = "fixed",
+		--    esqueda,altura,tras..,direita ,negativo aumenta para baixo, positivo aumenta para cima
+		fixed = {-0.2, -0.5, -0.2, 0.2, 0.3, 0.2},
+	},
+	
+	node_box = {
+		type = "fixed", 
+		fixed = {-0.2, -0.5, -0.2, 0.2, 0.3, 0.2},
+	},
+	
+	
+})
 
 
 
+
+---- ROAD BLOCK:
+minetest.register_node("deco:roadblock", {
+	description = "Traffic Pole",
+	drawtype = "mesh",
+	mesh = "road_block.obj",
+	--visual_size = {x=1, y=1},
+	--inventory_image = "",
+	tiles = {"road_block.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	--on_place = minetest.rotate_node,
+	sunlight_propagates = true,
+	walkable = true, 
+	floodable = false,
+	groups = {cracky = 3, oddly_breakable_by_hand = 3},
+	drop = "deco:roadblock",
+	
+	
+	selection_box = {
+		type = "fixed",
+		--    esqueda,altura,tras..,direita ,negativo aumenta para baixo, positivo aumenta para cima
+		fixed = {-0.5, -0.5, -0.3, 0.5, 0.3, 0.3},
+	},
+	
+	node_box = {
+		type = "fixed", 
+		fixed = {-0.5, -0.5, -0.3, 0.5, 0.3, 0.3},
+	},
+	
+	
+})
+
+
+
+---- Cardboard box:
+minetest.register_node("deco:cardboardbox", {
+	description = "Cardboard Box",
+	drawtype = "nodebox",
+	--mesh = "road_block.obj",
+	--visual_size = {x=1, y=1},
+	--inventory_image = "",
+	tiles = {
+	
+	"cardboardbox_top.png", 
+	"cardboardbox_side.png",
+	"cardboardbox_side.png",
+	"cardboardbox_side.png",
+	"cardboardbox_front.png",
+	"cardboardbox_front.png",
+	
+	
+	},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	--on_place = minetest.rotate_node,
+	sunlight_propagates = true,
+	walkable = true, 
+	floodable = false,
+	groups = {oddly_breakable_by_hand = 3},
+	drop = "deco:roadblock",
+	sounds = default.node_sound_leaves_defaults(),
+	
+	selection_box = {
+		type = "fixed",
+		--    esqueda,altura,tras..,direita ,negativo aumenta para baixo, positivo aumenta para cima
+		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+	},
+	
+	node_box = {
+		type = "fixed", 
+		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+	},
+	
+	
+})
 
 --[[
 minetest.register_craft({   ------ CRaFT

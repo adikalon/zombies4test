@@ -15,7 +15,8 @@ minetest.register_node("fortification:wirefence", {
 	walkable = true,
 	-- damage_per_second = 1,
         drop = "fortification:wirefence",
-        --sounds = default.node_sound_stone_defaults()
+        sounds = default.node_sound_metal_defaults(),
+        
      selection_box = {
 		type = "fixed",
 		--    esqueda,altura,tras..,direita ,negativo aumenta para baixo, positivo aumenta para cima
@@ -54,7 +55,8 @@ minetest.register_node("fortification:barbed_wire", {
 	walkable = true,
 	-- damage_per_second = 1,
         drop = "fortification:barbed_wire",
-        --sounds = default.node_sound_stone_defaults()
+        sounds = default.node_sound_metal_defaults(),
+        
      selection_box = {
 		type = "fixed",
 		--    esqueda,altura,tras..,direita ,negativo aumenta para baixo, positivo aumenta para cima
@@ -91,7 +93,7 @@ minetest.register_node("fortification:sandbag", {
 	-- light_source = 4, -- somente para identificar o bloco
 	groups = {cracky = 3},
         drop = "fortification:sandbag",
-        --sounds = default.node_sound_stone_defaults()	
+        sounds = default.node_sound_sand_defaults(),
 	
 })
 
@@ -113,7 +115,7 @@ minetest.register_node("fortification:metal_wall", {
 	-- light_source = 4, -- somente para identificar o bloco
 	groups = {cracky = 3},
         drop = "fortification:metal_wall",
-        --sounds = default.node_sound_stone_defaults()	
+        sounds = default.node_sound_metal_defaults(),
 	
 })
 
@@ -134,7 +136,7 @@ minetest.register_node("fortification:barbedwire2", {
 	drawtype = "mesh",
 	mesh = "wire.obj",
 	--inventory_image = "",
-	wield_image = "barbed_wire.png",
+	--wield_image = "barbed_wire.png",
 	tiles = {"barbed-wire.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -145,16 +147,17 @@ minetest.register_node("fortification:barbedwire2", {
 	damage_per_second =2,
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
 	drop = "fortification:barbedwire2",
+	sounds = default.node_sound_metal_defaults(),
 	
 	selection_box = {
 		type = "fixed",
 		--    esqueda,altura,tras..,direita ,negativo aumenta para baixo, positivo aumenta para cima
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.2, 0.3},
+		fixed = {-0.3, -0.4, -0.3, 0.3, 0.2, 0.3},
 	},
 	
 	node_box = {
 		type = "fixed", 
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.2, 0.3},
+		fixed = {-0.3, -0.4, -0.3, 0.3, 0.2, 0.3},
 	},
 	
 	

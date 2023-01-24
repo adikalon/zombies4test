@@ -26,7 +26,7 @@ mobs:register_mob("tankzombie:tankzombie", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
-	attack_animals = true,
+	--attack_animals = true,
 	pathfinding = true,
 	reach = 5,
 	damage = 10,

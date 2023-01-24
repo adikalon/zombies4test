@@ -14,7 +14,7 @@ minetest.register_craftitem("items:walkietalkie", {
 
 
 
----- MEDIC :
+---- MEDIC : ( Não tem craft )
 
 minetest.register_craftitem("items:bandaid", {
     description = "Band aid\n".. core.colorize("#ff0000", "+ 2 of blood"),

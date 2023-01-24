@@ -27,7 +27,7 @@ mobs:register_mob("crawlerzombie:crawlerzombie", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
-	attack_animals = true,
+	--attack_animals = true,
 	group_attack = true,
 	pathfinding = true,
 	reach = 2,

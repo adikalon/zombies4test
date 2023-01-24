@@ -26,7 +26,7 @@ mobs:register_mob("walkingzombie:walkingzombie", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
-	attack_animals = true,
+	--attack_animals = true,
 	group_attack = true,
 	pathfinding = true,
 	reach = 3,
@@ -101,28 +101,6 @@ mobs:register_egg("walkingzombie:walkingzombie", "Walking Zombie", "hunteraxe_eg
 
 
 
---------------------------------------------------------------------------------
--------------------------------- AXE -------------------------------------------
---------------------------------------------------------------------------------
---[[
-
-minetest.register_tool("huntersaxe:hunter_axe", {
-	description = core.colorize("#16c21e", "Hunter Axe"), 
-	inventory_image = "hunter_axe.png",
-	tool_capabilities = {
-		full_punch_interval = 1.0,
-		max_drop_level=1,
-		groupcaps={
-			choppy={times={[1]=2.50, [2]=1.40, [3]=1.00}, uses=20, maxlevel=2},
-		},
-		damage_groups = {fleshy=5},
-	},
-	sound = {breaks = "default_tool_breaks"},
-	groups = {axe = 1}
-})
-
-
-]]
 
 
 

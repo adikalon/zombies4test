@@ -42,8 +42,8 @@ minetest.register_craft({   ------ CRaFT
 })
 
 ]]
--- BARBED WIRE :
----- SAND BAG :
+
+---- ROAD :
 
 minetest.register_node("nodes:road", {
 	description = "Road",
@@ -67,7 +67,7 @@ minetest.register_craft({   ------ CRaFT
 })
 
 
----- Road 2 :
+---- ROAD 2 :
 
 minetest.register_node("nodes:road2", {
 	description = "Road 2",
@@ -90,8 +90,54 @@ minetest.register_craft({   ------ CRaFT
 })
 
 
----- Sidewalk :
+---- ROAD 2 :
+minetest.register_node("nodes:road3", {
+	description = "Road 3",
+	tiles = {"curvedroad.png"},
+	paramtype2 = "facedir",
+	groups = {cracky = 3},
+        drop = "nodes:road3",
+        sounds = default.node_sound_stone_defaults()	
+	
+})
 
+minetest.register_craft({   ------ CRaFT
+    type = "shaped",
+    output = "nodes:road2 12",
+    recipe = {
+        {"nodes:road","dye:yellow","nodes:road"},
+        {"nodes:road","dye:yellow","dye:yellow"},
+        {"nodes:road","nodes:road","nodes:road"}
+    }
+})
+
+
+
+---- Road Stop Line:
+minetest.register_node("nodes:roadstopline", {
+	description = "Road Stop Line",
+	tiles = {"road_stop_line.png"},
+	paramtype2 = "facedir",
+	groups = {cracky = 3},
+        drop = "nodes:roadstopline",
+        sounds = default.node_sound_stone_defaults()	
+	
+})
+
+
+minetest.register_craft({   ------ CRaFT
+    type = "shaped",
+    output = "nodes:road2 12",
+    recipe = {
+        {"nodes:road","dye:white","nodes:road"},
+        {"nodes:road","dye:white","nodes:road"},
+        {"nodes:road","dye:white","nodes:road"}
+    }
+})
+
+
+
+---- SIDEWALK :
 minetest.register_node("nodes:sidewalk", {
 	description = "Sidewalk",
 	tiles = {"sidewalk.png"},
@@ -102,15 +148,15 @@ minetest.register_node("nodes:sidewalk", {
 	
 })
 
---[[
+
 minetest.register_craft({   ------ CRaFT
     type = "shaped",
     output = "nodes:road2 12",
     recipe = {
-        {"nodes:road","dye:yellow","nodes:road"},
-        {"nodes:road","dye:yellow","nodes:road"},
-        {"nodes:road","dye:yellow","nodes:road"}
+        {"farming:string","farming:string","farming:string"},
+        {"farming:string","group:sand","farming:string"},
+        {"farming:string","farming:string","farming:string"}
     }
 })
-]]
+
 
