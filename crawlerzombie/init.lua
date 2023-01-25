@@ -28,6 +28,7 @@ mobs:register_mob("crawlerzombie:crawlerzombie", {
 	passive = false,
 	attack_type = "dogfight",
 	--attack_animals = true,
+	attack_npcs = false,
 	group_attack = true,
 	pathfinding = true,
 	reach = 2,
@@ -95,7 +96,7 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("crawlerzombie:crawlerzombie", "Crawler Zombie", "stone.png",1)
+mobs:register_egg("crawlerzombie:crawlerzombie", "Crawler Zombie", "zombies_egg.png",0)
 
 
 

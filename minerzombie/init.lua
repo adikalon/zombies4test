@@ -31,6 +31,7 @@ mobs:register_mob("minerzombie:minerzombie", {
 	attack_type = "dogfight",
 	group_attack = true,
 	pathfinding = true,
+	attack_npcs = false,
 	reach = 3,
 	damage = 3,
 	hp_min = 20,
@@ -98,7 +99,7 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("minerzombie:minerzombie", "Miner Zombie", "hunteraxe_egg.png", 1)
+mobs:register_egg("minerzombie:minerzombie", "Miner Zombie", "zombies_egg.png", 0)
 
 
 

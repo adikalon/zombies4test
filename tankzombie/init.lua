@@ -98,7 +98,7 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("tankzombie:tankzombie", "Tank Zombie", "tankzombie:tankzombie", 1)
+mobs:register_egg("tankzombie:tankzombie", "Tank Zombie", "zombies_egg.png", 0)
 
 
 

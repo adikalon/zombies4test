@@ -148,6 +148,7 @@ minetest.register_node("deco:table", {
 	floodable = false,
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
 	drop = "deco:table",
+	sounds = default.node_sound_wood_defaults(),
 	
 	selection_box = {
 		type = "fixed",
@@ -212,7 +213,7 @@ minetest.register_node("deco:armchair", {
 	floodable = false,
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
 	drop = "deco:armchair",
-	
+	sounds = default.node_sound_wood_defaults(),
 	
 	selection_box = {
 		type = "fixed",
@@ -299,7 +300,7 @@ minetest.register_node("deco:medicinebox", {
 		}
 	},
 	
-	sounds = default.node_sound_metal_defaults(),
+	sounds = default.node_sound_leaves_defaults(),
 	
 	selection_box = {
 		type = "fixed",
@@ -443,18 +444,98 @@ minetest.register_node("deco:cardboardbox", {
 	walkable = true, 
 	floodable = false,
 	groups = {oddly_breakable_by_hand = 3},
-	drop = "deco:roadblock",
+	
+	
+	drop = {
+		--max_items = 5,
+		items = {
+		
+		-- Foods:
+			
+			{
+				items = {'foods:canned_beans'},
+				rarity = 2,
+			},
+			
+			{
+				items = {'foods:canned_tomato'},
+				rarity = 1,
+			},
+			
+		
+		-- Bullets :
+		
+			{
+				items = {'rangedweapons:45acp 3'},
+				rarity = 3,
+			},
+			
+			{
+				items = {'rangedweapons:357 3'},
+				rarity = 4,
+			},
+			
+			{
+				items = {'rangedweapons:9mm 3'},
+				rarity = 5,
+			},
+			
+			{
+				items = {'rangedweapons:762mm 3'},
+				rarity = 6,
+			},
+		
+		
+		-- Armas :
+		
+			{
+				items = {'toolx:knife'},
+				rarity = 3,
+			},
+			
+			{
+				items = {'rangedweapons:steel_shuriken'},
+				rarity = 6,
+			},
+			
+		
+			{
+				items = {'rangedweapons:m1991'},
+				rarity = 8,
+			},
+			
+			{
+				items = {'rangedweapons:beretta'},
+				rarity = 10,
+			},
+			
+			{
+				items = {'rangedweapons:python'},
+				rarity = 15,
+			},
+			
+			
+				items = {'rangedweapons:ak47'},
+				rarity = 25,
+			},
+			
+			
+
+		
+	},
+	
+	
 	sounds = default.node_sound_leaves_defaults(),
 	
 	selection_box = {
 		type = "fixed",
 		--    esqueda,altura,tras..,direita ,negativo aumenta para baixo, positivo aumenta para cima
-		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+		fixed = {-0.3, -0.5, -0.3, 0.3, 0.1, 0.3},
 	},
 	
 	node_box = {
 		type = "fixed", 
-		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+		fixed = {-0.3, -0.5, -0.3, 0.3, 0.1, 0.3},
 	},
 	
 	

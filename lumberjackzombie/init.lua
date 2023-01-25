@@ -1,10 +1,11 @@
 local zombienods = {
-"default:dirt", 
+--"default:dirt", 
 "default:dirt_with_rainforest",
-"default:dirt_with_grass",
-"default:dirt_with_dry_grass",
-"default:dry_dirt_with_dry_grass",
+--"default:dirt_with_grass",
+--"default:dirt_with_dry_grass",
+--"default:dry_dirt_with_dry_grass",
 "default:dirt_with_coniferous_litter",
+--"default:dirt_with_coniferous"
 --"default:stone",
 --"default:ice", 
 --"default:snowblock",
@@ -27,6 +28,7 @@ mobs:register_mob("lumberjackzombie:lumberjackzombie", {
 	passive = false,
 	attack_type = "dogfight",
 	--attack_animals = true,
+	attack_npcs = false,
 	group_attack = true,
 	pathfinding = true,
 	reach = 3,
@@ -95,7 +97,7 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("lumberjackzombie:lumberjackzombie", "Lumberjack Zombie", "hunteraxe_egg.png", 1)
+mobs:register_egg("lumberjackzombie:lumberjackzombie", "Lumberjack Zombie", "zombies_egg.png", 0)
 
 
 

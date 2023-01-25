@@ -27,6 +27,7 @@ mobs:register_mob("doctorzombie:doctorzombie", {
 	passive = false,
 	attack_type = "dogfight",
 	--attack_animals = true,
+	attack_npcs = false,
 	group_attack = true,
 	pathfinding = true,
 	reach = 3,
@@ -97,7 +98,7 @@ mobs:spawn({
 })
 
 
-mobs:register_egg("doctorzombie:doctorzombie", "Doctor Zombie", "hunteraxe_egg.png", 1)
+mobs:register_egg("doctorzombie:doctorzombie", "Doctor Zombie", "zombies_egg.png", 0)
 
 
 
