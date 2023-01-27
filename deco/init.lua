@@ -29,6 +29,16 @@ minetest.register_node("deco:stopsign", {
 	
 })
 
+minetest.register_craft({   ------ CRaFT
+    type = "shaped",
+    output = "deco:stopsign",
+    recipe = {
+        {"","wool:red",""},
+        {"","default:steel_ingot",""},
+        {"","default:steel_ingot",""}
+      }
+})
+
 
 
 ---- trashcan :
@@ -65,6 +75,17 @@ minetest.register_node("deco:trashcan", {
 })
 
 
+minetest.register_craft({   ------ CRaFT
+    type = "shaped",
+    output = "deco:trashcan",
+    recipe = {
+        {"","",""},
+        {"","default:steel_ingot",""},
+        {"","bucket:bucket_empty",""}
+    }
+         
+})
+
 ---- VENDING MACHINE :
 minetest.register_node("deco:vendingmachine", {
 	description = "Vending machine",
@@ -99,6 +120,18 @@ minetest.register_node("deco:vendingmachine", {
 	
 })
 
+minetest.register_craft({   ------ CRaFT
+    type = "shaped",
+    output = "deco:vendingmachine",
+    recipe = {
+        {"default:steel_ingot","default:steel_ingot","default:steel_ingot"},
+        {"default:steel_ingot","wool:red","default:steel_ingot"},
+        {"default:steel_ingot","default:steel_ingot","default:steel_ingot"}
+    }
+         
+})
+
+
 ---- RADIO :
 minetest.register_node("deco:radio", {
 	description = "Radio",
@@ -129,6 +162,17 @@ minetest.register_node("deco:radio", {
 	},
 	
 	
+})
+
+minetest.register_craft({   ------ CRaFT
+    type = "shaped",
+    output = "deco:radio",
+    recipe = {
+        {"","",""},
+        {"","default:steel_ingot",""},
+        {"","wool:black",""}
+    }
+         
 })
 
 
@@ -164,6 +208,17 @@ minetest.register_node("deco:table", {
 	
 })
 
+minetest.register_craft({   ------ CRaFT
+    type = "shaped",
+    output = "deco:table",
+    recipe = {
+        {"group:wood","group:wood","group:wood"},
+        {"default:stick","","default:stick"},
+        {"default:stick","","default:stick"}
+    }
+         
+})
+
 
 ---- COMPUTER :
 minetest.register_node("deco:computer", {
@@ -197,6 +252,18 @@ minetest.register_node("deco:computer", {
 	
 })
 
+minetest.register_craft({   ------ CRaFT
+    type = "shaped",
+    output = "deco:computer",
+    recipe = {
+        {"default:steel_ingot","default:steel_ingot","default:steel_ingot"},
+        {"default:steel_ingot","default:glass","default:steel_ingot"},
+        {"","default:steel_ingot",""}
+    }
+         
+})
+
+
 ---- ARMCHAIR :
 minetest.register_node("deco:armchair", {
 	description = "Armchair",
@@ -229,7 +296,15 @@ minetest.register_node("deco:armchair", {
 	
 })
 
-
+minetest.register_craft({   ------ CRaFT
+    type = "shaped",
+    output = "deco:armchair",
+    recipe = {
+        {"","","wool:red"},
+        {"wool:red","wool:red","wool:red"},
+        {"wool:red","","wool:red"}
+    }
+ })
 
 
 ---- SHELVING :
@@ -262,6 +337,16 @@ minetest.register_node("deco:shelving", {
 	},
 	
 	
+})
+
+minetest.register_craft({   ------ CRaFT
+    type = "shaped",
+    output = "deco:shelving",
+    recipe = {
+        {"default:steel_ingot","","default:steel_ingot"},
+        {"default:steel_ingot","default:steel_ingot","default:steel_ingot"},
+        {"default:steel_ingot","","default:steel_ingot"}
+    }
 })
 
 
@@ -350,6 +435,17 @@ minetest.register_node("deco:trafficcone", {
 })
 
 
+minetest.register_craft({   ------ CRaFT
+    type = "shaped",
+    output = "deco:trafficcone 5",
+    recipe = {
+        {"","wool:orange",""},
+        {"","wool:white",""},
+        {"wool:orange","wool:orange","wool:orange"}
+    }
+ })
+
+
 ---- TRAFFIC POLE:
 minetest.register_node("deco:trafficpole", {
 	description = "Traffic Pole",
@@ -382,12 +478,21 @@ minetest.register_node("deco:trafficpole", {
 	
 })
 
+minetest.register_craft({   ------ CRaFT
+    type = "shaped",
+    output = "deco:trafficpole 3",
+    recipe = {
+        {"","wool:orange",""},
+        {"","wool:white",""},
+        {"","wool:orange",""}
+    }
+ })
 
 
 
 ---- ROAD BLOCK:
-minetest.register_node("deco:roadblock", {
-	description = "Traffic Pole",
+minetest.register_node("deco:trafficblock", {
+	description = "Traffic Block",
 	drawtype = "mesh",
 	mesh = "road_block.obj",
 	--visual_size = {x=1, y=1},
@@ -416,6 +521,16 @@ minetest.register_node("deco:roadblock", {
 	
 	
 })
+
+minetest.register_craft({   ------ CRaFT
+    type = "shaped",
+    output = "deco:trafficblock 8",
+    recipe = {
+        {"wool:red","wool:white","wool:red"},
+        {"wool:red","wool:white","wool:red"},
+        {"default:steel_ingot","","default:steel_ingot"}
+    }
+ })
 
 
 
@@ -466,22 +581,22 @@ minetest.register_node("deco:cardboardbox", {
 		-- Bullets :
 		
 			{
-				items = {'rangedweapons:45acp 3'},
+				items = {'rangedweapons:45acp 6'},
 				rarity = 3,
 			},
 			
 			{
-				items = {'rangedweapons:357 3'},
+				items = {'rangedweapons:357 6'},
 				rarity = 4,
 			},
 			
 			{
-				items = {'rangedweapons:9mm 3'},
+				items = {'rangedweapons:9mm 6'},
 				rarity = 5,
 			},
 			
 			{
-				items = {'rangedweapons:762mm 3'},
+				items = {'rangedweapons:762mm 6'},
 				rarity = 6,
 			},
 		

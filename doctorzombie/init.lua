@@ -22,7 +22,7 @@ local zombienods = {
 ---- SKULL SWORD  ------------------------------------------------------------------------------------------------------
 
 mobs:register_mob("doctorzombie:doctorzombie", {
-	nametag = "Doctor Zombie" ,
+	--nametag = "Doctor Zombie" ,
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -53,7 +53,7 @@ mobs:register_mob("doctorzombie:doctorzombie", {
 	walk_velocity = 1,
 	run_velocity = 4,
 	jump_height = 2,
-	stepheight = 1.1,
+	stepheight = 1.5,
 	floats = 0,
 	view_range = 35,
 	drops = {

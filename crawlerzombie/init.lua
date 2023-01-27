@@ -23,7 +23,7 @@ local zombienods = {
 ---- SKULL SWORD  ------------------------------------------------------------------------------------------------------
 
 mobs:register_mob("crawlerzombie:crawlerzombie", {
-	nametag = "Crawler Zombie" ,
+	--nametag = "Crawler Zombie" ,
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -54,7 +54,7 @@ mobs:register_mob("crawlerzombie:crawlerzombie", {
 	walk_velocity = 1,
 	run_velocity = 2,
 	jump_height = 2,
-	stepheight = 1.1,
+	stepheight = 1.2,
 	floats = 0,
 	view_range = 35,
 	drops = {
@@ -89,7 +89,7 @@ mobs:spawn({
 	min_light = 0,
 	max_light = 7,
 	chance = 7000,
-	min_height = 0,
+	min_height = -20000,
 	max_height = 200,
 	--max_height = 200,
 	active_object_count = 3,

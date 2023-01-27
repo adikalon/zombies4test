@@ -43,6 +43,41 @@ minetest.register_craft({   ------ CRaFT
 
 ]]
 
+
+---- white block :
+
+minetest.register_node("nodes:whiteblock", {
+	description = "White Block",
+	tiles = {"white_block.png"},
+	paramtype2 = "facedir",
+	groups = {cracky = 3},
+        drop = "nodes:road",
+        sounds = default.node_sound_stone_defaults()	
+	
+})
+
+
+
+---- COAL STAIR :
+minetest.register_node("nodes:stair_coal", {
+    description = "Stair Coal",
+    tiles = {"default_coal_block.png"},
+    drawtype = "nodebox",
+    paramtype = "light",
+    paramtype2 = "facedir",
+    groups = {cracky = 3},
+    drop = "default:coal_lump",
+    node_box = {
+        type = "fixed",
+        fixed = {
+            {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
+            {-0.5, 0, 0, 0.5, 0.5, 0.5},
+        },
+    }
+})
+
+
+
 ---- ROAD :
 
 minetest.register_node("nodes:road", {
@@ -103,7 +138,7 @@ minetest.register_node("nodes:road3", {
 
 minetest.register_craft({   ------ CRaFT
     type = "shaped",
-    output = "nodes:road2 12",
+    output = "nodes:road3 12",
     recipe = {
         {"nodes:road","dye:yellow","nodes:road"},
         {"nodes:road","dye:yellow","dye:yellow"},
@@ -127,7 +162,7 @@ minetest.register_node("nodes:roadstopline", {
 
 minetest.register_craft({   ------ CRaFT
     type = "shaped",
-    output = "nodes:road2 12",
+    output = "nodes:roadstopline 12",
     recipe = {
         {"nodes:road","dye:white","nodes:road"},
         {"nodes:road","dye:white","nodes:road"},
@@ -151,11 +186,11 @@ minetest.register_node("nodes:sidewalk", {
 
 minetest.register_craft({   ------ CRaFT
     type = "shaped",
-    output = "nodes:road2 12",
+    output = "nodes:sidewalk 6",
     recipe = {
-        {"farming:string","farming:string","farming:string"},
-        {"farming:string","group:sand","farming:string"},
-        {"farming:string","farming:string","farming:string"}
+        {"default:stone_block","default:stone_block","default:stone_block"},
+        {"default:stone_block","default:stone_block","default:stone_block"},
+        {"","",""}
     }
 })
 

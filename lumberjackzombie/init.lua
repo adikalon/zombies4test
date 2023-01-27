@@ -23,7 +23,7 @@ local zombienods = {
 ---- SKULL SWORD  ------------------------------------------------------------------------------------------------------
 
 mobs:register_mob("lumberjackzombie:lumberjackzombie", {
-	nametag = "Lumberjack Zombie" ,
+	--nametag = "Lumberjack Zombie" ,
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -54,7 +54,7 @@ mobs:register_mob("lumberjackzombie:lumberjackzombie", {
 	walk_velocity = 1,
 	run_velocity = 5,
 	jump_height = 2,
-	stepheight = 1.1,
+	stepheight = 1.5,
 	floats = 0,
 	view_range = 35,
 	drops = {
@@ -99,30 +99,6 @@ mobs:spawn({
 
 mobs:register_egg("lumberjackzombie:lumberjackzombie", "Lumberjack Zombie", "zombies_egg.png", 0)
 
-
-
---------------------------------------------------------------------------------
--------------------------------- AXE -------------------------------------------
---------------------------------------------------------------------------------
---[[
-
-minetest.register_tool("huntersaxe:hunter_axe", {
-	description = core.colorize("#16c21e", "Hunter Axe"), 
-	inventory_image = "hunter_axe.png",
-	tool_capabilities = {
-		full_punch_interval = 1.0,
-		max_drop_level=1,
-		groupcaps={
-			choppy={times={[1]=2.50, [2]=1.40, [3]=1.00}, uses=20, maxlevel=2},
-		},
-		damage_groups = {fleshy=5},
-	},
-	sound = {breaks = "default_tool_breaks"},
-	groups = {axe = 1}
-})
-
-
-]]
 
 
 

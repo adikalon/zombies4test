@@ -31,12 +31,12 @@ minetest.register_craftitem("items:bandaid", {
 
 
 minetest.register_craftitem("items:medicalkit", {
-    description = "Medical Kit\n".. core.colorize("#ff0000", "+ 10 of blood"),
+    description = "Medical Kit\n".. core.colorize("#ff0000", "+ 20 of blood"),
     inventory_image = "medic_kit.png",
     on_use = function(itemstack, user, pointed_thing) 
 		local hp = user:get_hp()
 		if hp ~= 20 then
-			user:set_hp(hp + 10)
+			user:set_hp(hp + 20)
 			itemstack:take_item()
 		end
 		return itemstack

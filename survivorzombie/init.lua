@@ -25,7 +25,7 @@ local zombienods = {
 --------------------------------------------------------------------------------
 
 mobs:register_mob("survivorzombie:survivorzombie", {
-	nametag = "Survivor Zombie" ,
+	--nametag = "Survivor Zombie" ,
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -56,7 +56,7 @@ mobs:register_mob("survivorzombie:survivorzombie", {
 	walk_velocity = 2,
 	run_velocity = 5,
 	jump_height = 2,
-	stepheight = 1.1,
+	stepheight = 1.5,
 	floats = 0,
 	view_range = 35,
 	drops = {
@@ -108,11 +108,12 @@ mobs:register_egg("survivorzombie:survivorzombie", "Survivor Zombie", "zombies_e
 --------------------------------------------------------------------------------
 
 mobs:register_mob("survivorzombie:survivorzombie2", {
-	nametag = "Survivor Zombie 2" ,
+	--nametag = "Survivor Zombie 2" ,
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
 	--attack_animals = true,
+	attack_npcs = false,
 	group_attack = true,
 	pathfinding = true,
 	reach = 3,
@@ -138,7 +139,7 @@ mobs:register_mob("survivorzombie:survivorzombie2", {
 	walk_velocity = 2,
 	run_velocity = 7,
 	jump_height = 5,
-	stepheight = 1.1,
+	stepheight = 1.5,
 	floats = 0,
 	view_range = 35,
 	drops = {

@@ -34,10 +34,10 @@ minetest.register_node("fortification:wirefence", {
 
 minetest.register_craft({   ------ CRaFT
     type = "shaped",
-    output = "fortification:grid",
+    output = "fortification:grid 6",
     recipe = {
-        {"default:steel_ingot","","default:steel_ingot"},
-        {"","default:steel_ingot",""},
+        {"fortification:barbed_wire","fortification:barbed_wire","fortification:barbed_wire"},
+        {"fortification:barbed_wire","fortification:barbed_wire","fortification:barbed_wire"},
         {"default:steel_ingot","","default:steel_ingot"}
     }
 })
@@ -73,7 +73,7 @@ minetest.register_node("fortification:barbed_wire", {
 
 minetest.register_craft({   ------ CRaFT
     type = "shaped",
-    output = "fortification:barbed_wire",
+    output = "fortification:barbed_wire 4",
     recipe = {
         {"","default:steel_ingot",""},
         {"default:steel_ingot","","default:steel_ingot"},
@@ -99,11 +99,11 @@ minetest.register_node("fortification:sandbag", {
 
 minetest.register_craft({   ------ CRaFT
     type = "shaped",
-    output = "fortification:barbedwire2",
+    output = "fortification:sandbag",
     recipe = {
-        {"group:sand","","group:sand"},
-        {"","group:sand",""},
-        {"group:sand","","group:sand"}
+        {"farming:string","farming:string","farming:string"},
+        {"farming:string","group:sand","farming:string"},
+        {"farming:string","farming:string","farming:string"}
     }
 })
 
@@ -121,7 +121,7 @@ minetest.register_node("fortification:metal_wall", {
 
 minetest.register_craft({   ------ CRaFT
     type = "shaped",
-    output = "fortification:barbedwire2",
+    output = "fortification:metal_wall 8",
     recipe = {
         {"default:steelblock","default:steelblock",""},
         {"default:steelblock","default:steelblock",""},

@@ -22,16 +22,16 @@ local zombienods = {
 ---- SKULL SWORD  ------------------------------------------------------------------------------------------------------
 
 mobs:register_mob("tankzombie:tankzombie", {
-	nametag = "Tank Zombie" ,
+	--nametag = "Tank Zombie" ,
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
 	--attack_animals = true,
 	pathfinding = true,
 	reach = 5,
-	damage = 10,
-	hp_min = 200,
-	hp_max = 200,
+	damage = 12,
+	hp_min = 250,
+	hp_max = 250,
 	armor = 80,
 	collisionbox = {-0.4, 0, -0.4, 0.4, 3.0, 0.4},
 	visual = "mesh",
@@ -53,11 +53,12 @@ mobs:register_mob("tankzombie:tankzombie", {
 	walk_velocity = 1,
 	run_velocity = 3,
 	jump_height = 5,
-	stepheight = 1.1,
+	stepheight = 1.7,
 	floats = 0,
 	view_range = 35,
 	drops = {
-		--{name = "huntersaxe:hunter_axe", chance = 2, min = 1, max = 1},
+		
+		{name = "default:diamondblock", chance = 2, min = 1, max = 1},
 		
 	},
 	water_damage = 0,
@@ -90,7 +91,7 @@ mobs:spawn({
 	nodes = hunternods,
 	min_light = 0,
 	max_light = 7, -- 14
-	chance = 8000,
+	chance = 16000,
 	min_height = 0,
 	max_height = 200,
 	--max_height = 200,
@@ -102,28 +103,6 @@ mobs:register_egg("tankzombie:tankzombie", "Tank Zombie", "zombies_egg.png", 0)
 
 
 
---------------------------------------------------------------------------------
--------------------------------- AXE -------------------------------------------
---------------------------------------------------------------------------------
---[[
-
-minetest.register_tool("huntersaxe:hunter_axe", {
-	description = core.colorize("#16c21e", "Hunter Axe"), 
-	inventory_image = "hunter_axe.png",
-	tool_capabilities = {
-		full_punch_interval = 1.0,
-		max_drop_level=1,
-		groupcaps={
-			choppy={times={[1]=2.50, [2]=1.40, [3]=1.00}, uses=20, maxlevel=2},
-		},
-		damage_groups = {fleshy=5},
-	},
-	sound = {breaks = "default_tool_breaks"},
-	groups = {axe = 1}
-})
-
-
-]]
 
 
 
