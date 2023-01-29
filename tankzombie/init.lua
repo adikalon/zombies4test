@@ -1,3 +1,8 @@
+
+-- Sound :
+-- https://freesound.org/people/missozzy/sounds/169985/
+-- https://freesound.org/people/zglar/sounds/232289/
+
 local zombienods = {
 "default:dirt", 
 "default:dirt_with_rainforest",
@@ -46,13 +51,13 @@ mobs:register_mob("tankzombie:tankzombie", {
 	--blood_texture = " ",
 	makes_footstep_sound = true,
 	sounds = {
-		random ="zombie_angry",
+		random ="missozzy",
 		--attack = "zombie_hit",
-		death = "zombie_death ",
+		death = "roar ",
 	},
 	walk_velocity = 1,
 	run_velocity = 3,
-	jump_height = 5,
+	jump_height = 15,
 	stepheight = 1.7,
 	floats = 0,
 	view_range = 35,
@@ -62,8 +67,15 @@ mobs:register_mob("tankzombie:tankzombie", {
 		
 	},
 	water_damage = 0,
-	lava_damage = 1,
+	lava_damage = 0,
 	light_damage = 0,
+	immune_to = {
+	
+	{"fortification:wirefence",  -10} ,
+	{"fortification:barbed_wire",  -10} ,
+	{"fortification:punji_sticks",  -10} ,
+	
+	},
 	animation = {
 		speed_normal = 15,
 		stand_start = 0,
@@ -80,6 +92,14 @@ mobs:register_mob("tankzombie:tankzombie", {
 		die_end = 380,
 	},
 	
+	
+	on_die = function(self, pos) -- POSIÇÃO
+	for _,players in pairs(minetest.get_objects_inside_radius(pos,64)) do -- CONSEGUIR RADIUS ( POSIÇÃO ,64 NODES?)
+			if players:is_player() then -- SE PLAYER
+				awards.unlock(players:get_player_name(), "tank") -- DESBLOQUEAR CONQUISTAS?
+			end
+		end
+	end
 	--custom_attack = function()	
 	--end,
 })

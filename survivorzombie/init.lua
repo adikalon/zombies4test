@@ -137,7 +137,7 @@ mobs:register_mob("survivorzombie:survivorzombie2", {
 		death = "zombie_death ",
 	},
 	walk_velocity = 2,
-	run_velocity = 7,
+	run_velocity = 5,
 	jump_height = 5,
 	stepheight = 1.5,
 	floats = 0,

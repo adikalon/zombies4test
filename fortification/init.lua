@@ -4,9 +4,9 @@
 
 -- GRID :
 
-minetest.register_node("fortification:wirefence", {
+minetest.register_node("fortification:grid", {
  	drawtype = "nodebox",
-	description = "Wire Fence",
+	description = "Grid",
 	tiles = {"grid.png"},
 	-- light_source = 4, -- somente para identificar o bloco
 	groups = {cracky = 3},
@@ -53,7 +53,7 @@ minetest.register_node("fortification:barbed_wire", {
 	groups = {cracky = 3},
 	paramtype = "light",
 	walkable = true,
-	-- damage_per_second = 1,
+	damage_per_second = 3,
         drop = "fortification:barbed_wire",
         sounds = default.node_sound_metal_defaults(),
         
@@ -131,8 +131,8 @@ minetest.register_craft({   ------ CRaFT
 
 
 -- BADED WIRE : ---------------------------------------------------------------
-minetest.register_node("fortification:barbedwire2", {
-	description = "Barbed wire",
+minetest.register_node("fortification:wirefence", {
+	description = "Wire fence",
 	drawtype = "mesh",
 	mesh = "wire.obj",
 	--inventory_image = "",
@@ -146,7 +146,7 @@ minetest.register_node("fortification:barbedwire2", {
 	floodable = false,
 	damage_per_second =2,
 	groups = {cracky = 3, oddly_breakable_by_hand = 3},
-	drop = "fortification:barbedwire2",
+	drop = "fortification:wirefence",
 	sounds = default.node_sound_metal_defaults(),
 	
 	selection_box = {
@@ -168,10 +168,10 @@ minetest.register_node("fortification:barbedwire2", {
 
 minetest.register_craft({   ------ CRaFT
     type = "shaped",
-    output = "fortification:barbedwire2",
+    output = "fortification:wirefence 8",
     recipe = {
-        {"default:steel_ingot","","default:steel_ingot"},
-        {"","default:steel_ingot",""},
+        {"default:steel_ingot","fortification:barbed_wire ","default:steel_ingot"},
+        {"default:steel_ingot","fortification:barbed_wire ","default:steel_ingot"},
         {"default:steel_ingot","","default:steel_ingot"}
     }
 })

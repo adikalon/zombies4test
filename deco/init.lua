@@ -656,6 +656,97 @@ minetest.register_node("deco:cardboardbox", {
 	
 })
 
+
+---- Cardboard box:
+minetest.register_node("deco:gravestone", {
+	description = "Gravestone",
+	drawtype = "mesh",
+	mesh = "gravestone.obj",
+	tiles = {
+	
+	"gravestone_dirt.png", 
+	
+	
+	},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	--on_place = minetest.rotate_node,
+	sunlight_propagates = true,
+	walkable = true, 
+	floodable = false,
+	groups = {oddly_breakable_by_hand = 3},
+	
+	
+	drop = {
+		--max_items = 5,
+		items = {
+
+		-- Bullets :
+		
+			{
+				items = {'rangedweapons:45acp 6'},
+				rarity = 3,
+			},
+			
+			{
+				items = {'rangedweapons:357 6'},
+				rarity = 4,
+			},
+			
+			{
+				items = {'rangedweapons:9mm 6'},
+				rarity = 5,
+			},
+			
+			{
+				items = {'rangedweapons:762mm 6'},
+				rarity = 6,
+			},
+	}
+
+		
+	},
+	
+	
+	sounds = default.node_sound_stone_defaults(),
+	
+	selection_box = {
+		type = "fixed",
+		--    esqueda,altura,tras..,direita ,negativo aumenta para baixo, positivo aumenta para cima
+		fixed = {-0.2, -0.5, -0.1, 0.2, 0.4, 0.1},
+	},
+	
+	node_box = {
+		type = "fixed", 
+		fixed = {-0.2, -0.5, -0.1, 0.2, 0.4, 0.1},
+	},
+	
+	
+})
+
+
+--- GRAVESTONE DECO MAP :
+minetest.register_decoration({
+    deco_type = "simple",
+    place_on = {
+    "default:dirt_with_coniferous",
+    "default:dirt_with_coniferous_litter",
+    "default:dirt_with_grass",
+    "default:dirt_with_snow"
+    },
+    sidelen = 80,
+    place_offset_y = 0,
+	biomes = {"underground"},
+    flags = "force_placement,all_floors",
+    fill_ratio = 0.0002,
+	y_max = 50,
+    y_min = 0,
+    decoration ="deco:gravestone",
+})
+
+
+
+
 --[[
 minetest.register_craft({   ------ CRaFT
     type = "shaped",

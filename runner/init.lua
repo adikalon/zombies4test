@@ -16,14 +16,13 @@ local zombienods = {
 "default:desert_stone",
 --"default:cobble", 
 "default:ice",
-"defaul:gravel",
+"default:gravel",
 } 
-
 
 ---- SKULL SWORD  ------------------------------------------------------------------------------------------------------
 
-mobs:register_mob("crawlerzombie:crawlerzombie", {
-	--nametag = "Crawler Zombie" ,
+mobs:register_mob("runner:runner", {
+	--nametag = "Runner Zombie" ,
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
@@ -31,35 +30,38 @@ mobs:register_mob("crawlerzombie:crawlerzombie", {
 	attack_npcs = false,
 	group_attack = true,
 	pathfinding = true,
-	reach = 2,
+	reach = 3,
 	damage = 3,
-	hp_min = 10,
-	hp_max = 10,
+	hp_min = 20,
+	hp_max = 20,
 	armor = 100,
-	collisionbox = {-0.4, 0, -0.4, 0.4, 0.5, 0.4},
+	collisionbox = {-0.4, 0, -0.4, 0.4, 1.8, 0.4},
 	visual = "mesh",
-	mesh = "crawlerzombie.b3d",
+	mesh = "runner.b3d",
 	--rotate = 180,
 	textures = {
-		{"crawlerzombie.png"},
+		{"runner.png"},
+		--{""},
+		
 	},
 	--glow = 4,
 	--blood_texture = " ",
 	makes_footstep_sound = true,
 	sounds = {
-		random ="zombie_angry",
+	        random ="zombie_angry",
 		--attack = "zombie_hit",
 		death = "zombie_death ",
 	},
-	walk_velocity = 1,
-	run_velocity = 2,
+	walk_velocity = 2,
+	run_velocity = 8,
 	jump_height = 2,
-	stepheight = 1.2,
+	stepheight = 1.7,
 	floats = 0,
 	view_range = 35,
 	drops = {
+		{name = "default:coal_lump", chance = 2, min = 1, max = 1},
+		{name = "farming:bread 3", chance = 2, min = 1, max = 1},
 		{name = "foods:canned_tomato", chance = 4, min = 1, max = 1},
-		{name = "foods:chips", chance = 6, min = 1, max = 1},
 		
 	},
 	water_damage = 0,
@@ -84,19 +86,20 @@ mobs:register_mob("crawlerzombie:crawlerzombie", {
 
 
 mobs:spawn({
-	name = "crawlerzombie:crawlerzombie",
+	name = "runner:runner",
 	nodes = hunternods,
 	min_light = 0,
-	max_light = 7,
-	chance = 7000,
+	max_light = 7, -- 14
+	chance = 30000,
 	min_height = -20000,
 	max_height = 200,
 	--max_height = 200,
-	active_object_count = 3,
+	active_object_count = 1,
 })
 
 
-mobs:register_egg("crawlerzombie:crawlerzombie", "Crawler Zombie", "zombies_egg.png",0)
+mobs:register_egg("runner:runner", "Runner Zombie", "zombies_egg.png", 0)
+
 
 
 
