@@ -1,7 +1,10 @@
 
+-- sounds :
+-- swoosh1 : https://freesound.org/people/lesaucisson/sounds/585257/
+-- swoosh2 : https://freesound.org/people/lesaucisson/sounds/585256/
+
 
 --- Cudgel 
-
 minetest.register_tool("toolx:baseball_bat", {
 	description = "Baseball bat",
 	inventory_image = "Cudgel_stone.png",

@@ -57,7 +57,7 @@ mobs:register_mob("tankzombie:tankzombie", {
 	},
 	walk_velocity = 1,
 	run_velocity = 3,
-	jump_height = 15,
+	jump_height = 5,
 	stepheight = 1.7,
 	floats = 0,
 	view_range = 35,

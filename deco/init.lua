@@ -682,7 +682,11 @@ minetest.register_node("deco:gravestone", {
 		items = {
 
 		-- Bullets :
-		
+			{
+				items = {'default:dirt'},
+				rarity = 3,
+			},
+			
 			{
 				items = {'rangedweapons:45acp 6'},
 				rarity = 3,

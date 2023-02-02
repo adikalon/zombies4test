@@ -58,8 +58,8 @@ mobs:register_mob("lumberjackzombie:lumberjackzombie", {
 	floats = 0,
 	view_range = 35,
 	drops = {
-		{name = "default:tree 1", chance = 2, min = 1, max = 1},
-		{name = "default:apple 5", chance = 3, min = 1, max = 1},
+		{name = "default:pine_tree 1", chance = 2, min = 1, max = 1},
+		{name = "farming:bread 3", chance = 3, min = 1, max = 1},
 		{name = "toolx:axe", chance = 5, min = 1, max = 1},
 		
 	},
