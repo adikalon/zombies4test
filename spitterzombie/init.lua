@@ -1,23 +1,23 @@
 local zombienods = {
-"default:dirt", 
+"default:dirt",
 "default:dirt_with_rainforest",
 "default:dirt_with_grass",
 "default:dirt_with_dry_grass",
 "default:dry_dirt_with_dry_grass",
 "default:dirt_with_coniferous_litter",
 "default:stone",
-"default:ice", 
+"default:ice",
 "default:snowblock",
 "default:dirt_with_snow",
-"default:sand", 
+"default:sand",
 "default:desert_sand",
 "default:desert_stone",
-"default:stone", 
+"default:stone",
 "default:desert_stone",
---"default:cobble", 
+--"default:cobble",
 "default:ice",
 "default:gravel",
-} 
+}
 
 
 ----- ACID =====================================================================
@@ -43,7 +43,7 @@ local zombienods = {
         vertical = false,
         texture = "gas.png",
    	 })
-	
+
 end
 
 
@@ -69,12 +69,12 @@ minetest.register_node("spitterzombie:acid", {
 	damage_per_second = 2, -- dano
 	groups = {snappy = 1, disable_jump = 1},
 	sounds = default.node_sound_leaves_defaults(),
-	
+
 	on_construct = function (pos, node) -- conseguir tempo do node
            minetest.get_node_timer(pos):start(5)
            gas(pos)
    	end,
-   	
+
    	 on_timer = function(pos,node,elapsed) -- após o tempo, o no pode ser trocado por ar
    	 minetest.swap_node(pos, {name = 'air'})
  	 end,
@@ -83,7 +83,7 @@ minetest.register_node("spitterzombie:acid", {
 ---- VOMITER ZOMBIE ============================================================
 
 mobs:register_mob("spitterzombie:spitterzombie", {
-	nametag = "Spitter Zombie" ,
+	--nametag = "Spitter Zombie" ,
 	type = "monster",
 	passive = false,
 	attack_type = "dogshoot",
@@ -106,7 +106,7 @@ mobs:register_mob("spitterzombie:spitterzombie", {
 	textures = {
 		{"fatzombie.png"},
 		--{"walkingzombie.png"},
-		
+
 	},
 	--glow = 4,
 	--blood_texture = " ",
@@ -126,7 +126,7 @@ mobs:register_mob("spitterzombie:spitterzombie", {
 		{name = "default:coal_lump", chance = 2, min = 1, max = 1},
 		{name = "farming:bread 3", chance = 2, min = 1, max = 1},
 		{name = "foods:canned_tomato", chance = 4, min = 1, max = 1},
-		
+
 	},
 	water_damage = 0,
 	lava_damage = 1,
@@ -155,19 +155,19 @@ mobs:register_arrow("spitterzombie:spitter_arrow", {
 --	visual = "wielditem",
 	visual_size = {x = 0.5, y = 0.5},
 	textures = {"gas.png"},
-	
+
 	velocity = 30,--6
-	
+
 
 	hit_player = function(self, player)
 	local pp = player:get_pos() -- Pos player
-	
+
 		 minetest.set_node(pp, {name = "spitterzombie:acid"})
-		 
-		
+
+
 	end,
-	
-	
+
+
 
 --	hit_mob = function(self, player)
 --		player:punch(self.object, 1.0, {
@@ -198,11 +198,3 @@ mobs:spawn({
 
 
 mobs:register_egg("spitterzombie:spitterzombie", "Spitter Zombie", "zombies_egg.png", 0)
-
-
-
-
-
-
-
-

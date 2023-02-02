@@ -1,11 +1,25 @@
 Nada ainda
 
-"Zombies4Test", is a modpack for Minetest, which adds zombies and
-some decorations to your world.
-This project is inspired by the mods, "Zombie Extreme", "True survival"
- and the modpack "Crafting Dead" .
+A simple modpack that adds some zombies to your world and a few other things...
 
  - BY : DUCKGO
  - LICENSE : MIT
  - TEXTURE : CC-BY-4.0
- 
+
+
+ - depends = default, mobs ,rangedweapons
+ - optional_depends = awards
+
+ Zumbis :
+  - Walking zombie
+  - crawler Zombie
+  - Survivor Zombie
+  - Lumberjack Zombie
+  - Doctor Zombie
+  - Miner Zombie
+  - Runner Zombie (Has higher speed than other zombies)
+  - Spitter Zombie (A little more life, and spits acid)
+  - Tank (Lots of health and lots of damage)
+
+
+  ...

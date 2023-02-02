@@ -1,23 +1,23 @@
 local zombienods = {
-"default:dirt", 
+"default:dirt",
 "default:dirt_with_rainforest",
 "default:dirt_with_grass",
 "default:dirt_with_dry_grass",
 "default:dry_dirt_with_dry_grass",
 "default:dirt_with_coniferous_litter",
 "default:stone",
-"default:ice", 
+"default:ice",
 "default:snowblock",
 "default:dirt_with_snow",
-"default:sand", 
+"default:sand",
 "default:desert_sand",
 "default:desert_stone",
-"default:stone", 
+"default:stone",
 "default:desert_stone",
---"default:cobble", 
+--"default:cobble",
 "default:ice",
 "defaul:gravel",
-} 
+}
 
 ---- SKULL SWORD  ------------------------------------------------------------------------------------------------------
 
@@ -57,12 +57,12 @@ mobs:register_mob("doctorzombie:doctorzombie", {
 	floats = 0,
 	view_range = 35,
 	drops = {
-	
+
 		  {name = "foods:candy", chance = 2, min = 1, max = 1},
 		  {name = "items:bandaid", chance = 4, min = 1, max = 1},
 		  {name = "items:medicalkit", chance = 6, min = 1, max = 1},
-		
-		
+
+
 	},
 	water_damage = 0,
 	lava_damage = 1,
@@ -99,11 +99,3 @@ mobs:spawn({
 
 
 mobs:register_egg("doctorzombie:doctorzombie", "Doctor Zombie", "zombies_egg.png", 0)
-
-
-
-
-
-
-
-
