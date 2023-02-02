@@ -1,5 +1,3 @@
-Nada ainda
-
 A simple modpack that adds some zombies to your world and a few other things...
 
  - BY : DUCKGO

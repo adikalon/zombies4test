@@ -60,7 +60,7 @@ mobs:register_mob("survivorzombie:survivorzombie", {
 	floats = 0,
 	view_range = 35,
 	drops = {
-		{name = "foods:canned_beans", chance = 4, min = 1, max = 1},
+		{name = "foodx:canned_beans", chance = 4, min = 1, max = 1},
 		{name = "toolx:cudgel_stone", chance = 6, min = 1, max = 1},
 		--{name = "", chance = 2, min = 1, max = 1},
 		

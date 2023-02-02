@@ -372,11 +372,11 @@ minetest.register_node("deco:medicinebox", {
 		--max_items = 5,
 		items = {
 			{
-				items = {'items:bandaid 1'},
+				items = {'itemx:bandaid 1'},
 				rarity = 1,
 			},
 			{
-				items = {'items:medicalkit 1'},
+				items = {'itemx:medicalkit 1'},
 				rarity = 7,
 			},
 			
@@ -568,7 +568,7 @@ minetest.register_node("deco:cardboardbox", {
 		-- Foods:
 			
 			{
-				items = {'foods:canned_beans'},
+				items = {'foodx:canned_beans'},
 				rarity = 2,
 			},
 			

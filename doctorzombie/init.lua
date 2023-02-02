@@ -58,9 +58,9 @@ mobs:register_mob("doctorzombie:doctorzombie", {
 	view_range = 35,
 	drops = {
 
-		  {name = "foods:candy", chance = 2, min = 1, max = 1},
-		  {name = "items:bandaid", chance = 4, min = 1, max = 1},
-		  {name = "items:medicalkit", chance = 6, min = 1, max = 1},
+		  {name = "foodx:candy", chance = 2, min = 1, max = 1},
+		  {name = "itemx:bandaid", chance = 4, min = 1, max = 1},
+		  {name = "itemx:medicalkit", chance = 6, min = 1, max = 1},
 
 
 	},

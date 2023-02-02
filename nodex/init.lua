@@ -46,12 +46,12 @@ minetest.register_craft({   ------ CRaFT
 
 ---- white block :
 
-minetest.register_node("nodes:whiteblock", {
+minetest.register_node("nodex:whiteblock", {
 	description = "White Block",
 	tiles = {"white_block.png"},
 	paramtype2 = "facedir",
 	groups = {cracky = 3},
-        drop = "nodes:road",
+        drop = "nodex:road",
         sounds = default.node_sound_stone_defaults()	
 	
 })
@@ -59,7 +59,7 @@ minetest.register_node("nodes:whiteblock", {
 
 
 ---- COAL STAIR :
-minetest.register_node("nodes:stair_coal", {
+minetest.register_node("nodex:stair_coal", {
     description = "Stair Coal",
     tiles = {"default_coal_block.png"},
     drawtype = "nodebox",
@@ -80,12 +80,12 @@ minetest.register_node("nodes:stair_coal", {
 
 ---- ROAD :
 
-minetest.register_node("nodes:road", {
+minetest.register_node("nodex:road", {
 	description = "Road",
 	tiles = {"road.png"},
 	paramtype2 = "facedir",
 	groups = {cracky = 3},
-        drop = "nodes:road",
+        drop = "nodex:road",
         sounds = default.node_sound_stone_defaults()	
 	
 })
@@ -93,7 +93,7 @@ minetest.register_node("nodes:road", {
 
 minetest.register_craft({   ------ CRaFT
     type = "shaped",
-    output = "nodes:road 9",
+    output = "nodex:road 9",
     recipe = {
         {"default:coal_lump","default:coal_lump","default:coal_lump"},
         {"default:coal_lump","default:stone","default:coal_lump"},
@@ -104,57 +104,57 @@ minetest.register_craft({   ------ CRaFT
 
 ---- ROAD 2 :
 
-minetest.register_node("nodes:road2", {
+minetest.register_node("nodex:road2", {
 	description = "Road 2",
 	tiles = {"road_y.png"},
 	paramtype2 = "facedir",
 	groups = {cracky = 3},
-        drop = "nodes:road2",
+        drop = "nodex:road2",
         sounds = default.node_sound_stone_defaults()	
 	
 })
 
 minetest.register_craft({   ------ CRaFT
     type = "shaped",
-    output = "nodes:road2 12",
+    output = "nodex:road2 12",
     recipe = {
-        {"nodes:road","dye:yellow","nodes:road"},
-        {"nodes:road","dye:yellow","nodes:road"},
-        {"nodes:road","dye:yellow","nodes:road"}
+        {"nodex:road","dye:yellow","nodex:road"},
+        {"nodex:road","dye:yellow","nodex:road"},
+        {"nodex:road","dye:yellow","nodex:road"}
     }
 })
 
 
 ---- ROAD 2 :
-minetest.register_node("nodes:road3", {
+minetest.register_node("nodex:road3", {
 	description = "Road 3",
 	tiles = {"curvedroad.png"},
 	paramtype2 = "facedir",
 	groups = {cracky = 3},
-        drop = "nodes:road3",
+        drop = "nodex:road3",
         sounds = default.node_sound_stone_defaults()	
 	
 })
 
 minetest.register_craft({   ------ CRaFT
     type = "shaped",
-    output = "nodes:road3 12",
+    output = "nodex:road3 12",
     recipe = {
-        {"nodes:road","dye:yellow","nodes:road"},
-        {"nodes:road","dye:yellow","dye:yellow"},
-        {"nodes:road","nodes:road","nodes:road"}
+        {"nodex:road","dye:yellow","nodex:road"},
+        {"nodex:road","dye:yellow","dye:yellow"},
+        {"nodex:road","nodex:road","nodex:road"}
     }
 })
 
 
 
 ---- Road Stop Line:
-minetest.register_node("nodes:roadstopline", {
+minetest.register_node("nodex:roadstopline", {
 	description = "Road Stop Line",
 	tiles = {"road_stop_line.png"},
 	paramtype2 = "facedir",
 	groups = {cracky = 3},
-        drop = "nodes:roadstopline",
+        drop = "nodex:roadstopline",
         sounds = default.node_sound_stone_defaults()	
 	
 })
@@ -162,23 +162,23 @@ minetest.register_node("nodes:roadstopline", {
 
 minetest.register_craft({   ------ CRaFT
     type = "shaped",
-    output = "nodes:roadstopline 12",
+    output = "nodex:roadstopline 12",
     recipe = {
-        {"nodes:road","dye:white","nodes:road"},
-        {"nodes:road","dye:white","nodes:road"},
-        {"nodes:road","dye:white","nodes:road"}
+        {"nodex:road","dye:white","nodex:road"},
+        {"nodex:road","dye:white","nodex:road"},
+        {"nodex:road","dye:white","nodex:road"}
     }
 })
 
 
 
 ---- SIDEWALK :
-minetest.register_node("nodes:sidewalk", {
+minetest.register_node("nodex:sidewalk", {
 	description = "Sidewalk",
 	tiles = {"sidewalk.png"},
 	paramtype2 = "facedir",
 	groups = {cracky = 3},
-        drop = "nodes:sidewalk",
+        drop = "nodex:sidewalk",
         sounds = default.node_sound_stone_defaults()	
 	
 })
@@ -186,7 +186,7 @@ minetest.register_node("nodes:sidewalk", {
 
 minetest.register_craft({   ------ CRaFT
     type = "shaped",
-    output = "nodes:sidewalk 6",
+    output = "nodex:sidewalk 6",
     recipe = {
         {"default:stone_block","default:stone_block","default:stone_block"},
         {"default:stone_block","default:stone_block","default:stone_block"},

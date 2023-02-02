@@ -123,9 +123,10 @@ mobs:register_mob("spitterzombie:spitterzombie", {
 	floats = 0,
 	view_range = 35,
 	drops = {
-		{name = "default:coal_lump", chance = 2, min = 1, max = 1},
-		{name = "farming:bread 3", chance = 2, min = 1, max = 1},
-		{name = "foods:canned_tomato", chance = 4, min = 1, max = 1},
+		--{name = "", chance = 2, min = 1, max = 1},
+		{name = "foodx:canned_tomato", chance = 2, min = 1, max = 1},
+		{name = "foodx:chocolate_bar", chance = 4, min = 1, max = 1},
+		
 
 	},
 	water_damage = 0,

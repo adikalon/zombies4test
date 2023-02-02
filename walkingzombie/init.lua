@@ -61,7 +61,7 @@ mobs:register_mob("walkingzombie:walkingzombie", {
 	drops = {
 		{name = "default:coal_lump", chance = 2, min = 1, max = 1},
 		{name = "farming:bread 3", chance = 2, min = 1, max = 1},
-		{name = "foods:canned_tomato", chance = 4, min = 1, max = 1},
+		{name = "foodx:canned_tomato", chance = 4, min = 1, max = 1},
 		
 	},
 	water_damage = 0,
