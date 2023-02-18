@@ -177,8 +177,10 @@ mobs:register_arrow("spitterzombie:spitter_arrow", {
 --		}, nil)
 --	end,
 
---	hit_node = function(self, pos)
---	end
+hit_node = function(self, pos)
+	--local pn = {x = pos.x,z = pos.z,y =pos.y}
+	--minetest.set_node(pn, {name = "spitterzombie:acid"})
+end
 
 })
 
