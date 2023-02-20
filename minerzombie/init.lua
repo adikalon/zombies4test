@@ -1,23 +1,11 @@
 local zombienods = {
---"default:dirt", 
---"default:dirt_with_rainforest",
+
 "default:dirt_with_grass",
---"default:dirt_with_dry_grass",
---"default:dry_dirt_with_dry_grass",
---"default:dirt_with_coniferous_litter",
 "default:stone",
---"default:ice", 
---"default:snowblock",
---"default:dirt_with_snow",
---"default:sand", 
---"default:desert_sand",
---"default:desert_stone",
 "default:stone", 
 "default:desert_stone",
---"default:cobble",
 "default:mossycobble", 
---"default:chest",
---"default:ice",
+
 
 } 
 
