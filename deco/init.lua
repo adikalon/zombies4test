@@ -573,7 +573,7 @@ minetest.register_node("deco:cardboardbox", {
 			},
 			
 			{
-				items = {'foods:canned_tomato'},
+				items = {'foodx:canned_tomato'},
 				rarity = 1,
 			},
 			

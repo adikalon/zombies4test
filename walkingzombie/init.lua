@@ -55,7 +55,7 @@ mobs:register_mob("walkingzombie:walkingzombie", {
 	walk_velocity = 1,
 	run_velocity = 5,
 	jump_height = 2,
-	stepheight = 1.5,
+	stepheight = 1.2,
 	floats = 0,
 	view_range = 35,
 	drops = {
