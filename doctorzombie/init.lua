@@ -13,7 +13,6 @@ local zombienods = {
 "default:desert_stone",
 "default:stone",
 "default:desert_stone",
---"default:cobble",
 "default:ice",
 "nodex:road",
 "nodex:road2",
@@ -47,7 +46,7 @@ mobs:register_mob("doctorzombie:doctorzombie", {
 	--blood_texture = " ",
 	makes_footstep_sound = true,
 	sounds = {
-		random ="zombie_angry",
+		--random ="zombie_angry",
 		--attack = "zombie_hit",
 		death = "zombie_death ",
 	},

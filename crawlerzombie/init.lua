@@ -48,7 +48,7 @@ mobs:register_mob("crawlerzombie:crawlerzombie", {
 	--blood_texture = " ",
 	makes_footstep_sound = true,
 	sounds = {
-		random ="zombie_angry",
+		--random ="zombie_angry",
 		--attack = "zombie_hit",
 		death = "zombie_death ",
 	},
@@ -59,8 +59,8 @@ mobs:register_mob("crawlerzombie:crawlerzombie", {
 	floats = 0,
 	view_range = 35,
 	drops = {
-		{name = "foods:canned_tomato", chance = 4, min = 1, max = 1},
-		{name = "foods:chips", chance = 6, min = 1, max = 1},
+		{name = "foodx:canned_tomato", chance = 4, min = 1, max = 1},
+		{name = "foodx:chips", chance = 6, min = 1, max = 1},
 		
 	},
 	water_damage = 0,

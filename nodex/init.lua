@@ -195,3 +195,36 @@ minetest.register_craft({   ------ CRaFT
 })
 
 
+---- BRICK MOTEL :
+minetest.register_node("nodex:brick_motel", {
+	description = "Brick Motel",
+	tiles = {"brick_motel.png"},
+	paramtype2 = "facedir",
+	groups = {cracky = 3},
+        drop = "nodex:brick_motel",
+        sounds = default.node_sound_stone_defaults()	
+	
+})
+
+
+---- FLOOR BLOCK :
+minetest.register_node("nodex:floor_block", {
+	description = "Floor Block",
+	tiles = {"floor_block.png"},
+	paramtype2 = "facedir",
+	groups = {cracky = 3},
+        drop = "nodex:floor_block",
+        sounds = default.node_sound_stone_defaults()	
+	
+})
+
+---- MEDICAL TENT :
+minetest.register_node("nodex:medicaltentblock", {
+	description = "Medical Tent Block",
+	tiles = {"medical_tent_block.png"},
+	paramtype2 = "facedir",
+	groups = {cracky = 3},
+        drop = "nodex:medicaltentblock",
+        sounds = default.node_sound_stone_defaults()	
+	
+})

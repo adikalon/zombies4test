@@ -41,7 +41,7 @@ mobs:register_mob("minerzombie:minerzombie", {
 		death = "zombie_death ",
 	},
 	walk_velocity = 1,
-	run_velocity = 5,
+	run_velocity = 3,
 	jump_height = 2,
 	stepheight = 1.5,
 	floats = 0,

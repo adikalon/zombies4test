@@ -11,7 +11,6 @@ local zombienods = {
 "default:dirt_with_snow",
 "default:desert_sand",
 "default:desert_stone",
-"default:stone", 
 "default:desert_stone",
 "default:ice",
 "nodex:road",
