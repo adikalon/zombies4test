@@ -104,6 +104,12 @@ mobs:register_mob("tankzombie:tankzombie", {
 	--end,
 })
 
+-- ADICIONANDO ATAQUE QUE MUDA O POSIÇÃO
+minetest.register_on_punchplayer(function(player, hitter, time_from_last_punch, tool_capabilities, dir)
+  if hitter:get_luaentity().name == "tankzombie:tankzombie" then
+    player:set_pos({x=player:get_pos().x+5,y=player:get_pos().y+5,z=player:get_pos().z})
+  end
+end)
 
 
 mobs:spawn({
