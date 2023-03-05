@@ -44,18 +44,47 @@ minetest.register_craft({   ------ CRaFT
 ]]
 
 
----- white block :
+---- HOSPITAL BLOCK :
 
 minetest.register_node("nodex:whiteblock", {
 	description = "White Block",
 	tiles = {"white_block.png"},
 	paramtype2 = "facedir",
 	groups = {cracky = 3},
-        drop = "nodex:road",
+        drop = "nodex:whiteblock",
         sounds = default.node_sound_stone_defaults()	
 	
 })
 
+minetest.register_node("nodex:greenblock", {
+	description = "Green Block",
+	tiles = {"green_node.png"},
+	paramtype2 = "facedir",
+	groups = {cracky = 3},
+        drop = "nodex:green_node",
+        sounds = default.node_sound_stone_defaults()	
+	
+})
+
+minetest.register_node("nodex:redblock", {
+	description = "Red Block",
+	tiles = {"red_node.png"},
+	paramtype2 = "facedir",
+	groups = {cracky = 3},
+        drop = "nodex:redblock",
+        sounds = default.node_sound_stone_defaults()	
+	
+})
+
+minetest.register_node("nodex:grayblock", {
+	description = "Gray Block",
+	tiles = {"gray_node.png"},
+	paramtype2 = "facedir",
+	groups = {cracky = 3},
+        drop = "nodex:grayblock",
+        sounds = default.node_sound_stone_defaults()	
+	
+})
 
 
 ---- COAL STAIR :

@@ -1,3 +1,5 @@
+local climb_node = { "default:ladder_wood" ,"default:ladder_steel"}
+
 local zombienods = {
 "default:dirt", 
 "default:dirt_with_rainforest",
@@ -80,6 +82,26 @@ mobs:register_mob("walkingzombie:walkingzombie", {
 		die_start = 280,
 		die_end = 300,
 	},
+	
+		do_custom = function(self, dtime)
+	
+	
+	local pos = self.object:get_pos() -- consegue sua propia posição
+	local vel = {x=0, y=0.2, z=0} -- deveria ser velocidade hehe
+	local face = minetest.get_node({x=pos.x, y=pos.y, z=pos.z+1}) -- bloco que estar em sua frente
+	
+	for i,v in ipairs (climb_node) do
+	if face.name == v  then -- se o bloco em sua frente é escadas
+    
+        self.object:set_pos({x=pos.x, y=pos.y+1, z=pos.z}) -- enquanto o bloco for escadas y+1
+        self.object:set_velocity(vel)     -- velocidade, não eficiente :/
+          
+        
+			end
+		
+		end
+	end
+	
 })
 
 
