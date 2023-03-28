@@ -88,6 +88,7 @@ mobs:register_mob("tankzombie:tankzombie", {
 		punch_speed = 25,
 		punch_start = 200,
 		punch_end = 250,
+		--die_speed = 20,
 		die_start = 260,
 		die_end = 380,
 	},
