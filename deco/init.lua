@@ -86,6 +86,14 @@ minetest.register_craft({   ------ CRaFT
          
 })
 
+---- ZCOIN -------------------------------------
+--[[
+minetest.register_craftitem("deco:zcoin", {
+	description = "Zcoin",
+	inventory_image = "",
+
+})
+]]
 ---- VENDING MACHINE :
 minetest.register_node("deco:vendingmachine", {
 	description = "Vending machine",

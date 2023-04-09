@@ -92,6 +92,7 @@ mobs:register_mob("doctorzombie:doctorzombie", {
 	local vel = {x=0, y=0.2, z=0} -- deveria ser velocidade hehe
 	local face = minetest.get_node({x=pos.x, y=pos.y, z=pos.z+1}) -- bloco que estar em sua frente
 	
+	
 	for i,v in ipairs (climb_node) do
 	if face.name == v  then -- se o bloco em sua frente é escadas
     
@@ -100,8 +101,8 @@ mobs:register_mob("doctorzombie:doctorzombie", {
           
         
 			end
-		
 		end
+	
 	end
 	
 })
