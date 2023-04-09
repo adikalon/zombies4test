@@ -51,7 +51,7 @@ minetest.register_decoration({
     flags = "place_center_x,place_center_z,force_placement,all_floors",
     y_max = 15,
     y_min = 10,
-    schematic = minetest.get_modpath("structures").."/schematics/hotel.mts",
+    schematic = minetest.get_modpath("structures").."/schematics/nhotel.mts",
     rotation = "random",
 })
 
