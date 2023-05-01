@@ -61,7 +61,7 @@ minetest.register_node("nodex:greenblock", {
 	tiles = {"green_node.png"},
 	paramtype2 = "facedir",
 	groups = {cracky = 3},
-        drop = "nodex:green_node",
+        drop = "nodex:greenblock",
         sounds = default.node_sound_stone_defaults()	
 	
 })

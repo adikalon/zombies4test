@@ -9,9 +9,6 @@ local zombienods = {
 
 } 
 
-
----- SKULL SWORD  ------------------------------------------------------------------------------------------------------
-
 mobs:register_mob("minerzombie:minerzombie", {
 	--nametag = "Miner Zombie" ,
 	type = "monster",
@@ -70,6 +67,12 @@ mobs:register_mob("minerzombie:minerzombie", {
 		die_start = 280,
 		die_end = 300,
 	},
+
+--[[	
+on_die = function(self, pos) 
+	
+	end
+	]]
 })
 
 

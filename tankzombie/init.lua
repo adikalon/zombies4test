@@ -32,7 +32,7 @@ mobs:register_mob("tankzombie:tankzombie", {
 	passive = false,
 	attack_type = "dogfight",
 	--attack_animals = true,
-	pathfinding = true,
+	pathfinding = 1,
 	reach = 5,
 	damage = 12,
 	hp_min = 250,
@@ -40,7 +40,8 @@ mobs:register_mob("tankzombie:tankzombie", {
 	armor = 60,
 	collisionbox = {-0.4, 0, -0.4, 0.4, 3.0, 0.4},
 	visual = "mesh",
-	mesh = "zombietank.b3d",
+	mesh = "ztank.b3d",
+	visual_size = {x=12, y=12},
 	--rotate = 180,
 	textures = {
 		{"tankzombiex.png"},
@@ -88,13 +89,17 @@ mobs:register_mob("tankzombie:tankzombie", {
 		punch_speed = 25,
 		punch_start = 200,
 		punch_end = 250,
-		--die_speed = 20,
+		die_speed = 15,
 		die_start = 260,
-		die_end = 380,
+		die_end = 399,
+				
 	},
 	
 	
+	--[[
 	on_die = function(self, pos) -- POSIÇÃO
+
+  self.object:set_animation({x=260, y=380}, 20, 0)
 	for _,players in pairs(minetest.get_objects_inside_radius(pos,64)) do -- CONSEGUIR RADIUS ( POSIÇÃO ,64 NODES?)
 			if players:is_player() then -- SE PLAYER
 				awards.unlock(players:get_player_name(), "tank") -- DESBLOQUEAR CONQUISTAS?
@@ -103,6 +108,10 @@ mobs:register_mob("tankzombie:tankzombie", {
 	end
 	--custom_attack = function()	
 	--end,
+
+	]]
+
+
 })
 
 -- ADICIONANDO ATAQUE QUE MUDA O POSIÇÃO
@@ -111,6 +120,8 @@ minetest.register_on_punchplayer(function(player, hitter, time_from_last_punch, 
     player:set_pos({x=player:get_pos().x+5,y=player:get_pos().y+5,z=player:get_pos().z})
   end
 end)
+
+
 
 
 mobs:spawn({

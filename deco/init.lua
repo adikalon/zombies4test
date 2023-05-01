@@ -2,7 +2,7 @@ minetest.register_node("deco:stopsign", {
 	description = "stop sign",
 	drawtype = "mesh",
 	mesh = "stopsign.obj",
-	isual_size = {x=1, y=1},
+	--visual_size = {x=1, y=1},
 	--inventory_image = "",
 	--wield_image = "stop_sign.png",
 	tiles = {"stop_sign.png"},
@@ -46,7 +46,7 @@ minetest.register_node("deco:trashcan", {
 	description = "trashcan",
 	drawtype = "mesh",
 	mesh = "trashcan.obj",
-	isual_size = {x=1, y=1},
+	--visual_size = {x=1, y=1},
 	--inventory_image = "",
 	wield_image = "trashcan.png",
 	tiles = {"trashcan.png"},
@@ -99,7 +99,7 @@ minetest.register_node("deco:vendingmachine", {
 	description = "Vending machine",
 	drawtype = "mesh",
 	mesh = "vending_machine.obj",
-	isual_size = {x=1, y=1},
+	--visual_size = {x=1, y=1},
 	--inventory_image = "",
 	--wield_image = "monitor.png",
 	tiles = {"vending_machine.png"},
@@ -124,6 +124,10 @@ minetest.register_node("deco:vendingmachine", {
 		type = "fixed", 
 		fixed = {-0.5, -0.5, -0.5, 0.5, 1.4, 0.5},
 	},
+
+	 on_rightclick = function(pos, node, player, itemstack, pointed_thing)
+        minetest.chat_send_player(player:get_player_name(), "This machine is empty!")
+    end,
 	
 	
 })
@@ -141,11 +145,12 @@ minetest.register_craft({   ------ CRaFT
 
 
 ---- RADIO :
+--- Sound : https://freesound.org/people/arialfa07/sounds/516618/
 minetest.register_node("deco:radio", {
 	description = "Radio",
 	drawtype = "mesh",
 	mesh = "radio.obj",
-	isual_size = {x=1, y=1},
+	--visual_size = {x=1, y=1},
 	--inventory_image = "",
 	tiles = {"radio.png"},
 	paramtype = "light",
@@ -168,6 +173,15 @@ minetest.register_node("deco:radio", {
 		type = "fixed", 
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.2, 0.3},
 	},
+
+	 on_rightclick = function(pos, node, player, itemstack, pointed_thing)
+        -- Play a sound to the player at the node position
+        minetest.sound_play("radioo", {
+            pos = pos,
+            gain = 1.0,
+            max_hear_distance = 10,
+        })
+    end,
 	
 	
 })
@@ -189,7 +203,7 @@ minetest.register_node("deco:table", {
 	description = "Table",
 	drawtype = "mesh",
 	mesh = "table.obj",
-	isual_size = {x=1, y=1},
+	--visual_size = {x=1, y=1},
 	--inventory_image = "",
 	tiles = {"table.png"},
 	paramtype = "light",
@@ -233,7 +247,7 @@ minetest.register_node("deco:computer", {
 	description = "Computer",
 	drawtype = "mesh",
 	mesh = "computer.obj",
-	isual_size = {x=1, y=1},
+	--visual_size = {x=1, y=1},
 	--inventory_image = "",
 	tiles = {"computerr.png"},
 	paramtype = "light",
@@ -249,7 +263,7 @@ minetest.register_node("deco:computer", {
 	selection_box = {
 		type = "fixed",
 		--    esqueda,altura,tras..,direita ,negativo aumenta para baixo, positivo aumenta para cima
-		fixed = {-0.4, -0.5, -0.4, 0.4, 0.1, 0.4},
+		fixed = {-0.4, -0.5, -0.001, 0.4, 0.1, 0.15},
 	},
 	
 	node_box = {
@@ -257,6 +271,10 @@ minetest.register_node("deco:computer", {
 		fixed = {-0.4, -0.5, -0.4, 0.4, 0.5, 0.4},
 	},
 	
+	 on_rightclick = function(pos, node, player, itemstack, pointed_thing)
+        local formspec = "size[8,8;]image[-0.9,-0.3;12,11;pc.png]"
+        minetest.show_formspec(player:get_player_name(), "mymod:img_formspec", formspec) -- falta a imagem
+    end
 	
 })
 
@@ -277,7 +295,7 @@ minetest.register_node("deco:armchair", {
 	description = "Armchair",
 	drawtype = "mesh",
 	mesh = "armchair.obj",
-	isual_size = {x=1, y=1},
+	--visual_size = {x=1, y=1},
 	--inventory_image = "",
 	tiles = {"armchair.png"},
 	paramtype = "light",
@@ -300,7 +318,37 @@ minetest.register_node("deco:armchair", {
 		type = "fixed", 
 		fixed = {-0.4, -0.5, -0.4, 0.4, -0.1, 0.4},
 	},
-	
+
+	--[[
+    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+
+    	for _, player in ipairs(minetest.get_connected_players()) do
+    		minetest.chat_send_player(player:get_player_name(), "punch the armchair to get up!")
+    	end
+       
+        clicker:set_physics_override({
+	    gravity = 0,  
+	    jump = 0,  
+	    speed = 0,  
+	    }) 
+        clicker:set_eye_offset({x = 0, y = -3, z = 0}, {x = 0, y = 0, z = 0}) 
+        clicker:set_animation({x=81,y=160}, 0, 0) 
+        minetest.after(0.1, function() 
+        clicker:set_pos({x=pos.x, y=pos.y-0.5, z=pos.z})
+        end)
+    end,
+
+     on_punch = function(pos, node, puncher)
+        puncher:set_physics_override({
+	    gravity = 1,  
+	    jump = 1, 
+	    speed = 1, 
+	    }) 
+        puncher:set_eye_offset({x = 0, y = 0, z = 0}, {x = 0, y = 0, z = 0}) 
+        puncher:set_animation({x=1,y=80}, 0, 0) 
+    end,
+
+    ]]
 	
 })
 
@@ -320,7 +368,7 @@ minetest.register_node("deco:shelving", {
 	description = "Shelving",
 	drawtype = "mesh",
 	mesh = "shelving.obj",
-	isual_size = {x=1, y=1},
+	--visual_size = {x=1, y=1},
 	--inventory_image = "",
 	tiles = {"shalving.png"},
 	paramtype = "light",
@@ -364,7 +412,7 @@ minetest.register_node("deco:medicinebox", {
 	description = "Medicine Box",
 	drawtype = "mesh",
 	mesh = "medicine_box.obj",
-	isual_size = {x=1, y=1},
+	--visual_size = {x=1, y=1},
 	--inventory_image = "",
 	tiles = {"medicine_box.png"},
 	paramtype = "light",
@@ -415,7 +463,7 @@ minetest.register_node("deco:trafficcone", {
 	description = "Traffic Cone",
 	drawtype = "mesh",
 	mesh = "traffic_cone.obj",
-	isual_size = {x=1, y=1},
+	--visual_size = {x=1, y=1},
 	--inventory_image = "",
 	tiles = {"traffic_cone.png"},
 	paramtype = "light",
@@ -575,6 +623,7 @@ minetest.register_node("deco:cardboardbox", {
 		
 		-- Foods:
 			
+			--[[
 			{
 				items = {'foodx:canned_beans'},
 				rarity = 2,
@@ -584,7 +633,7 @@ minetest.register_node("deco:cardboardbox", {
 				items = {'foodx:canned_tomato'},
 				rarity = 1,
 			},
-			
+			]]
 		
 		-- Bullets :
 		
@@ -770,3 +819,78 @@ minetest.register_craft({   ------ CRaFT
     }
 })
 ]]
+
+
+
+---- BEDS :
+minetest.register_node("deco:dirtybeds", {
+	description = "Dirty beds",
+	drawtype = "mesh",
+	mesh = "bedx.obj",
+	--visual_size = {x=1, y=1},
+	--inventory_image = "",
+	tiles = {"bedx.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	--on_place = minetest.rotate_node,
+	sunlight_propagates = true,
+	walkable = true, 
+	floodable = false,
+	groups = {cracky = 3, oddly_breakable_by_hand = 3},
+	--drop = " ",
+	sounds = default.node_sound_wood_defaults(),
+	
+	selection_box = {
+		type = "fixed",
+		--    esqueda,altura,tras..,direita ,negativo aumenta para baixo, positivo aumenta para cima
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.01, 1.5},
+	},
+	
+	node_box = {
+		type = "fixed", 
+		fixed = {-0.5, -0.5, -0.5, 0.5, -0.01, 1.5},
+	},
+
+    on_rightclick = function(pos, node, player, itemstack, pointed_thing)
+       
+    	 minetest.chat_send_player(player:get_player_name(), "That bed is contaminated, you can't sleep in it!")
+       
+    end,
+    
+	
+})
+
+
+
+---- VASES :
+minetest.register_node("deco:vases", {
+	description = "Vases",
+	drawtype = "mesh",
+	mesh = "vases.obj",
+	--visual_size = {x=1, y=1},
+	--inventory_image = "",
+	tiles = {"vases.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	--on_place = minetest.rotate_node,
+	sunlight_propagates = true,
+	walkable = true, 
+	floodable = false,
+	groups = {cracky = 3, oddly_breakable_by_hand = 3},
+	--drop = " ",
+	sounds = default.node_sound_wood_defaults(),
+	
+	selection_box = {
+		type = "fixed",
+		--    esqueda,altura,tras..,direita ,negativo aumenta para baixo, positivo aumenta para cima
+		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+	},
+	
+	node_box = {
+		type = "fixed", 
+		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+	},
+
+  
+	
+})

@@ -20,9 +20,31 @@ local zombienods = {
 }
 
 
+ function poison_part (pos)  --- PARTICULAS
+
+   minetest.add_particlespawner({
+		amount = 5,
+		time = 0.1,
+		minpos = pos,
+		maxpos = pos,
+		minvel = {x = dir.x - 1, y = dir.y, z = dir.z - 1},
+		maxvel = {x = dir.x + 1, y = dir.y, z = dir.z + 1},
+		minacc = {x = 0, y = -5, z = 0},
+		maxacc = {x = 0, y = -9, z = 0},
+		minexptime = 1,
+		maxexptime = 1,
+		minsize = 1,
+		maxsize = 2,
+		texture = "stamina_poison_particle.png"
+	})
+
+	
+end
+
 ----- ACID =====================================================================
 
 --- Particules :
+--[[
 
  function gas(pos)  --- PARTICULAS
 
@@ -79,6 +101,8 @@ minetest.register_node("spitterzombie:acid", {
    	 minetest.swap_node(pos, {name = 'air'})
  	 end,
 })
+
+]]
 
 ---- VOMITER ZOMBIE ============================================================
 
@@ -161,9 +185,56 @@ mobs:register_arrow("spitterzombie:spitter_arrow", {
 
 
 	hit_player = function(self, player)
-	local pp = player:get_pos() -- Pos player
+		-- Quando estar de armadura , o escudo bloquei parte do dano causado por evenenamento
 
-		 minetest.set_node(pp, {name = "spitterzombie:acid"})
+		 minetest.chat_send_player(player:get_player_name(), "You are poisoned!") -- msg para p player
+ 
+		local count = 15 -- Contagem de tempo do dano era 15
+		local delay = 1 -- Intervaloe entre danos
+
+		local function countdown()
+			if count > 0 then -- Se o contador ainda não chegou a 0
+
+			---------- PARTICULAS :
+				    local pos = player:get_pos()
+				    local dir = player:get_look_dir()  -- direção em que o jogador está olhando
+				    local distance = 1  -- distância a partir da cabeça do jogador
+				    local front_player = {
+				    x = pos.x + (dir.x * distance),
+				    y = pos.y + (dir.y * distance) + 1.5, -- altura da cabeça do jogador
+				    z = pos.z + (dir.z * distance)
+				    }
+
+				    minetest.add_particlespawner({
+				        amount = 3, -- quantidade de particulas
+				        time = 2, -- quanto tempo geradas
+				        minpos = front_player,
+				        maxpos = front_player,
+				        minvel = {x = -0.1, y = 0.1, z = -0.1}, -- velocidade das particulas
+				        maxvel = {x = 0.1, y = 0.3, z = 0.1},
+				        minacc = {x = 0, y = -0.1, z = 0}, -- acelaração das particulas , direção
+				        maxacc = {x = 0, y = -0.2, z = 0},
+				        minexptime = 0, -- tempo de vida da particula
+				        maxexptime = 0.5, -- tempo de vida da particula
+				        minsize = 1,
+				        maxsize = 2,
+				        collisiondetection = true,
+				        collision_removal = true,
+				        object_collision = false,
+				        vertical = false,
+				        texture = "poison_particle.png",
+				    })
+
+				--- DANO :
+				player:set_hp(player:get_hp() - 1)
+				count = count - 1 -- Decrementar o contador
+				minetest.after(delay, countdown) -- Chamar a função novamente após um atraso
+
+			--else 
+			end
+		end
+		
+		minetest.after(delay, countdown) -- Iniciar a contagem regressiva
 
 
 	end,
