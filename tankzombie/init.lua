@@ -94,6 +94,18 @@ mobs:register_mob("tankzombie:tankzombie", {
 		die_end = 399,
 				
 	},
+
+	
+		on_spawn = function(self)
+        --local pos = self.object:get_pos()
+        -- Adicionar animação
+        self.object:set_animation({x=430, y=490},30, 0, false)
+
+        -- Pós animação
+		minetest.after(3, function()
+			mobs:set_animation(self, "walk")
+        end)
+    end,
 	
 	
 	--[[

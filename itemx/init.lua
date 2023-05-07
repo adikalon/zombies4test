@@ -1,6 +1,7 @@
 minetest.register_craftitem("itemx:walkietalkie", {
     description = " Walkie Talkie",
-    inventory_image = "walkietalkie.png",	
+    inventory_image = "walkietalkie.png",
+    --droppable = false,	
    on_use = function() -- msg (player)
 	--minetest.chat_send_all ("HELP ME ,PLEASE...")
 	minetest.sound_play("Walkietalkiesoundeffect", {
