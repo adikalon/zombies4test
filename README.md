@@ -1,28 +1,12 @@
-A simple modpack that adds some zombies to your world and a few other things...
+# Minecraft Mobs [`mobs_mc`]
 
- - BY : DUCKGO
- - LICENSE : MIT
- - TEXTURE : CC-BY-4.0
+This is a fork of the unsupported [zombie mod](https://github.com/minetest-mods-camp/zombies4test) for the minetest game
 
+![Preview](./screenshot.png)
 
- - depends = default, mobs ,rangedweapons
- - optional_depends = awards
+## Changes
 
- Zumbis :
-  - Walking zombie
-  - crawler Zombie
-  - Survivor Zombie
-  - Lumberjack Zombie
-  - Doctor Zombie
-  - Miner Zombie
-  - Runner Zombie (Has higher speed than other zombies)
-  - Spitter Zombie (A little more life, and spits acid)
-  - Tank (Lots of health and lots of damage)
-
-
-    Sounds :
-    
-  - Zombie death : https://freesound.org/people/tonsil5/sounds/555412/
-  - Zombie Hit : https://freesound.org/people/tonsil5/sounds/555420/
-  - Zombie Angry : https://freesound.org/people/ChuckChuckGoof/sounds/559558/
-  ...
+* All zombies are supplied with one mod
+* All tools have been removed
+* Changed spawn settings
+* Sunlight kills zombies
