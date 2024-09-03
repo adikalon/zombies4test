@@ -22,16 +22,11 @@ if minetest.get_mapgen_setting("mg_name") == "v7" then
 	end
 end
 
--- SPAWN NODES
-zombies4test.spawn_nodes = {
-	zombie = {"group:cracky", "group:crumbly"},
-}
-
 -- SPAWNS
 zombies4test.spawns = {
-	zombie = {
-		name = "mobs_mc:zombie",
-		nodes = zombies4test.spawn_nodes.zombie,
+	crawlerzombie = {
+		name = "zombies4test:crawlerzombie",
+		nodes = {"group:cracky", "group:crumbly"},
 		neighbors = {"air"},
 		max_light = 7,
 		interval = 30,
