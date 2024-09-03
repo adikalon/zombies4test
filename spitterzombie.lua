@@ -33,7 +33,7 @@ mobs:register_mob("zombies4test:spitterzombie", {
 	view_range = 35,
 	drops = {},
 	lava_damage = 4,
-	light_damage = 2,
+	light_damage = 10,
 	water_damage = 0.01,
 	fall_damage = true,
 	animation = {
