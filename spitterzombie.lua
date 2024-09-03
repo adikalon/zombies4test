@@ -61,8 +61,6 @@ mobs:register_arrow("zombies4test:spitter_arrow", {
 	velocity = 30,
 
 	hit_player = function(self, player)
-		 minetest.chat_send_player(player:get_player_name(), "You are poisoned!")
-
 		local count = 15
 		local delay = 1
 
