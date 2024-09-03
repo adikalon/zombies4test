@@ -57,4 +57,15 @@ zombies4test.spawns = {
 		min_height = zombies4test.height.min,
 		max_height = zombies4test.height.max,
 	},
+	minerzombie = {
+		name = "zombies4test:minerzombie",
+		nodes = {"group:cracky", "group:crumbly"},
+		neighbors = {"air"},
+		max_light = 7,
+		interval = 30,
+		chance = 20000,
+		active_object_count = 1,
+		min_height = zombies4test.height.min,
+		max_height = -25,
+	},
 }

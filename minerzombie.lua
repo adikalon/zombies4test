@@ -1,22 +1,11 @@
-local zombienods = {
-
-"default:dirt_with_grass",
-"default:stone",
-"default:stone", 
-"default:desert_stone",
-"default:mossycobble", 
-
-
-} 
-
-mobs:register_mob("minerzombie:minerzombie", {
-	--nametag = "Miner Zombie" ,
+mobs:register_mob("zombies4test:minerzombie", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
 	group_attack = true,
 	pathfinding = true,
-	attack_npcs = false,
+	attack_animals = true,
+	attack_npcs = true,
 	reach = 3,
 	damage = 3,
 	hp_min = 20,
@@ -25,16 +14,12 @@ mobs:register_mob("minerzombie:minerzombie", {
 	collisionbox = {-0.4, 0, -0.4, 0.4, 1.8, 0.4},
 	visual = "mesh",
 	mesh = "walkingzombie.b3d",
-	--rotate = 180,
 	textures = {
 		{"minerzombie.png"},
 	},
-	--glow = 4,
-	--blood_texture = " ",
 	makes_footstep_sound = true,
 	sounds = {
 		random ="zombie_angry",
-		--attack = "zombie_hit",
 		death = "zombie_death ",
 	},
 	walk_velocity = 1,
@@ -43,16 +28,11 @@ mobs:register_mob("minerzombie:minerzombie", {
 	stepheight = 1.5,
 	floats = 0,
 	view_range = 35,
-	drops = {
-		
-		{name = "default:coal 3", chance = 3, min = 1, max = 1},
-		{name = "default:torch 1", chance = 4, min = 1, max = 1},
-		{name = "default:pick_steel", chance = 5, min = 1, max = 1},
-		
-	},
-	water_damage = 0,
-	lava_damage = 1,
-	light_damage = 0,
+	drops = {},
+	lava_damage = 4,
+	light_damage = 2,
+	water_damage = 0.01,
+	fall_damage = true,
 	animation = {
 		speed_normal = 15,
 		speed_run = 15,
@@ -67,35 +47,10 @@ mobs:register_mob("minerzombie:minerzombie", {
 		die_start = 280,
 		die_end = 300,
 	},
-
---[[	
-on_die = function(self, pos) 
-	
-	end
-	]]
 })
 
+mobs:register_egg("zombies4test:minerzombie", zombies4test.S("Miner Zombie"), "zombies_egg.png", 0)
 
-
-mobs:spawn({
-	name = "minerzombie:minerzombie",
-	nodes = hunternods,
-	min_light = 0,
-	max_light = 8,
-	chance = 7000,
-	--min_height = -29000,
-	max_height = -20,
-	--max_height = 200,
-	active_object_count = 5,
-})
-
-
-mobs:register_egg("minerzombie:minerzombie", "Miner Zombie", "zombies_egg.png", 0)
-
-
-
-
-
-
-
-
+if not zombies4test.custom_spawn and zombies4test.spawns.minerzombie then
+	mobs:spawn(zombies4test.spawns.minerzombie)
+end

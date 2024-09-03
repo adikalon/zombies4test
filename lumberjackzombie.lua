@@ -32,6 +32,7 @@ mobs:register_mob("zombies4test:lumberjackzombie", {
 	lava_damage = 4,
 	light_damage = 2,
 	water_damage = 0.01,
+	fall_damage = true,
 	animation = {
 		speed_normal = 15,
 		speed_run = 15,
