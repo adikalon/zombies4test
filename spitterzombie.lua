@@ -5,7 +5,7 @@ mobs:register_mob("zombies4test:spitterzombie", {
 	attack_animals = true,
 	attack_npcs = true,
 	shoot_interval = 4.5,
-	arrow = "spitterzombie:spitter_arrow",
+	arrow = "zombies4test:spitter_arrow",
 	shoot_offset = 1,
 	pathfinding = true,
 	reach = 3,
@@ -54,7 +54,7 @@ mobs:register_mob("zombies4test:spitterzombie", {
 	},
 })
 
-mobs:register_arrow("spitterzombie:spitter_arrow", {
+mobs:register_arrow("zombies4test:spitter_arrow", {
 	visual = "sprite",
 	visual_size = {x = 0.5, y = 0.5},
 	textures = {"gas.png"},
