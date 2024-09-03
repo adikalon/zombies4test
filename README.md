@@ -1,4 +1,4 @@
-# Zombies 4 Test [`zombies4test`]
+# Zombies4Test [`zombies4test`]
 
 This is a fork of the unsupported [zombie mod](https://github.com/minetest-mods-camp/zombies4test) for the minetest game
 
