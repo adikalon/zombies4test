@@ -33,7 +33,7 @@ zombies4test.spawns = {
 		chance = 20000,
 		active_object_count = 1,
 		min_height = zombies4test.height.min,
-		max_height = zombies4test.height.max,
+		max_height = -25,
 	},
 	doctorzombie = {
 		name = "zombies4test:doctorzombie",
@@ -77,7 +77,7 @@ zombies4test.spawns = {
 		chance = 20000,
 		active_object_count = 1,
 		min_height = zombies4test.height.min,
-		max_height = zombies4test.height.max,
+		max_height = -25,
 	},
 	spitterzombie = {
 		name = "zombies4test:spitterzombie",
@@ -99,7 +99,7 @@ zombies4test.spawns = {
 		chance = 20000,
 		active_object_count = 1,
 		min_height = zombies4test.height.min,
-		max_height = -25,
+		max_height = zombies4test.height.max,
 	},
 	tankzombie = {
 		name = "zombies4test:tankzombie",

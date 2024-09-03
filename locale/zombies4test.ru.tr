@@ -1,11 +1,11 @@
 # textdomain: zombies4test
 
-Crawler Zombie=
-Doctor Zombie=
-Lumberjack Zombie=
-Miner Zombie=
-Runner Zombie=
-Spitter Zombie=
-Survivor Zombie=
-Tank Zombie=
-Walking Zombie=
+Crawler Zombie=Ползающий Зомби
+Doctor Zombie=Доктор Зомби-Доктор
+Lumberjack Zombie=Зомби-Лесоруб
+Miner Zombie=Зомби-Шахтер
+Runner Zombie=Бегающий Зомби
+Spitter Zombie=Плюющийся Зомби
+Survivor Zombie=Выживший Зомби
+Tank Zombie=Зомби-Танк
+Walking Zombie=Блуждающий Зомби
