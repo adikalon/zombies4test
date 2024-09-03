@@ -19,8 +19,9 @@ mobs:register_mob("zombies4test:survivorzombie", {
 	},
 	makes_footstep_sound = true,
 	sounds = {
+		attack = "zombie_hit",
 		random ="zombie_angry",
-		death = "zombie_death ",
+		death = "zombie_death",
 	},
 	walk_velocity = 1,
 	run_velocity = 3,

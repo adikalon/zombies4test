@@ -21,7 +21,9 @@ mobs:register_mob("zombies4test:spitterzombie", {
 	},
 	makes_footstep_sound = true,
 	sounds = {
-		death = "zombie_death ",
+		attack = "zombie_hit",
+		random ="zombie_angry",
+		death = "zombie_death",
 	},
 	walk_velocity = 1,
 	run_velocity = 3,
