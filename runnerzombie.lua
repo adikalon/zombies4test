@@ -15,7 +15,7 @@ mobs:register_mob("zombies4test:runnerzombie", {
 	visual = "mesh",
 	mesh = "runner.b3d",
 	textures = {
-		{"runner.png"},
+		{"runnerzombie.png"},
 	},
 	makes_footstep_sound = true,
 	sounds = {

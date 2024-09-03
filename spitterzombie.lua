@@ -52,7 +52,6 @@ mobs:register_mob("zombies4test:spitterzombie", {
 	},
 })
 
-
 mobs:register_arrow("spitterzombie:spitter_arrow", {
 	visual = "sprite",
 	visual_size = {x = 0.5, y = 0.5},
