@@ -1,6 +1,6 @@
 mobs:register_mob("zombies4test:tankzombie", {
 	type = "monster",
-	attack_animals = true,
+	attack_animals = false,
 	attack_npcs = true,
 	passive = false,
 	attack_type = "dogfight",

@@ -2,7 +2,7 @@ mobs:register_mob("zombies4test:spitterzombie", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogshoot",
-	attack_animals = true,
+	attack_animals = false,
 	attack_npcs = true,
 	shoot_interval = 4.5,
 	arrow = "zombies4test:spitter_arrow",

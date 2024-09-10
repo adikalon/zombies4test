@@ -4,7 +4,7 @@ mobs:register_mob("zombies4test:minerzombie", {
 	attack_type = "dogfight",
 	group_attack = true,
 	pathfinding = true,
-	attack_animals = true,
+	attack_animals = false,
 	attack_npcs = true,
 	reach = 3,
 	damage = 3,

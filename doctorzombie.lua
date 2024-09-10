@@ -2,7 +2,7 @@ mobs:register_mob("zombies4test:doctorzombie", {
 	type = "monster",
 	passive = false,
 	attack_type = "dogfight",
-	attack_animals = true,
+	attack_animals = false,
 	attack_npcs = true,
 	group_attack = true,
 	pathfinding = true,
